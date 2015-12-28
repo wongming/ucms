@@ -1,0 +1,27 @@
+[2015-10-29 17:01:30,175][9765][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:02:15,990][9776][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:02:18,133][9784][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:03:15,788][9796][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:04:20,380][9808][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:04:41,186][9817][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:07:29,933][9869][ERROR][table.py:insert:85]: duplicate data in T_ACCOUNT wangming2
+[2015-10-29 17:07:29,984][9869][ERROR][table.py:select:76]: select account from T_ACCOUNT failed and ID = [1]
+[2015-10-29 17:07:30,028][9869][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:14:40,318][9928][ERROR][table.py:select:77]: select account from T_ACCOUNT failed and ID = [1]
+[2015-10-29 17:14:40,354][9928][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:16:31,937][9943][ERROR][table.py:select:77]: select account from T_ACCOUNT failed and ID = [11]
+[2015-10-29 17:16:31,959][9943][WARNING][table.py:select_all:69]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:17:03,685][9953][WARNING][table.py:select_all:70]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:20:06,826][10001][WARNING][table.py:select_all:70]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:21:25,979][10019][WARNING][table.py:select_all:70]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:21:40,603][10027][WARNING][table.py:select_all:70]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:21:52,507][10034][ERROR][table.py:select:77]: select account from T_ACCOUNT failed and ID = [11]
+[2015-10-29 17:21:52,510][10034][WARNING][table.py:select_all:70]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-10-29 17:22:00,503][10044][WARNING][table.py:select_all:70]: get all accounts from T_ACCOUNT failed and T_ACCOUNT is empty
+[2015-11-04 10:13:59,591][4344][ERROR][table.py:insert:140]: duplicate data in T_Driver mutiply
+[2015-11-04 10:16:39,234][4355][ERROR][table.py:insert:140]: duplicate data in T_Driver mutiply
+[2015-11-04 10:19:35,576][4387][ERROR][table.py:insert:140]: duplicate data in T_Driver mutiply
+[2015-11-04 10:34:48,591][4554][ERROR][table.py:insert:140]: duplicate data in T_Driver mutiply
+[2015-11-04 10:40:21,227][4604][ERROR][table.py:insert:140]: duplicate data in T_Driver mutiply
+[2015-11-04 11:05:43,955][4681][ERROR][table.py:insert:140]: duplicate data in T_Driver mutiply
+[2015-11-04 11:05:43,959][4681][ERROR][table.py:insert:182]: duplicate data in T_CASE mutiply_2_7

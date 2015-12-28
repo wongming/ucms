@@ -1,0 +1,33 @@
+/************************************************************
+ * 文件名：common.css
+*
+* 文件说明：主要用于呈现网站所有页面样式。
+*
+* @author wangming
+*************************************************************/
+/************************** global **************************/
+html {overflow-y: scroll;}
+.modal {overflow: hidden;}
+body {
+    padding-top: 14px;
+    font-family: "黑体" "Microsoft YaHei";
+    line-height:1.5em;
+}
+.container {
+    width: 1024px !important;
+}
+/***************** header *******************/
+
+/***************** footer *******************/
+.footer {
+	font-size: 12px;
+	text-align: center;
+	background-color: #f8f8f8;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 40px;
+	font-family:宋体;
+}
+
+
+/***************** module ********************/
