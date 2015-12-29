@@ -1,0 +1,36 @@
+$var baseTitle: Driver List
+$var navTitle: driver
+$var jsFiles: static/lib/trimpath/template.js static/js/ListDriver.js
+<textarea id="list_template" style="display: none;">
+    <table class = "table table-striped table-hover">
+        <thead>
+        <tr>
+            <td id="list_td_task">Driver Name</td>
+            <td id="list_td_time">Description</td>
+        </tr>
+        </thead>
+        <tbody>
+        {for item in pageData}
+        <tr>
+            <td><a href="driver/$${item.id}">$${item.name}</a></td>
+            <td>$${item.description}</td>
+        </tr>
+        {/for}
+        </tbody>
+    </table>
+</textarea>
+<div id="list_container" style="display: none;"></div>
+<table>
+    <tr>
+        <td colspan="3" id="list_td_foot">
+            共<span id="list_totalDataNo"></span>条
+            每页显示<input id="list_pageSize" type="text"/>条
+            <button id ="list_firstPage" class = "btn">首页</button>
+            <button id ="list_prevPage" class = "btn">上一页</button>
+            <input id="list_currentPageNo" type="text"></input>/
+            <span id="list_pageNo"></span>
+            <button id ="list_nextPage" class = "btn" >下一页</button>
+            <button id ="list_lastPage" class = "btn" >末页</button>
+        </td>
+    </tr>
+</table>

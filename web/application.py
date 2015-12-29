@@ -1,15 +1,20 @@
-import os
+import os,sys
+import json
 import web
+
+cur_dir = os.path.split(os.path.realpath(__file__))[0]
+sys.path.append(cur_dir+'/../control/')
+
+import DriverControl
 
 web.config.debug = False
 
 urls = (
     "/","Index",
     "/dashboard","Dashboard",
-    "/getData","pageList"
+    "/driver","ListDriver",
+    "/driver/(.+)","ViewDriver"
 )
-
-cur_dir = os.path.split(os.path.realpath(__file__))[0]
 
 app = web.application(urls, globals(), autoreload = False)
 
@@ -24,127 +29,41 @@ no_base_render = web.template.render(cur_dir + '/template/', cache = False, glob
 
 class Index:
     def GET(self):
-        return no_base_render.index()
+        web.seeother('/dashboard')
+
 class Dashboard:
     def GET(self):
         return render.dashboard()
 
-class pageList(object):
+class ListDriver(object):
     def POST(self):
-        data = [
-            {
-                "task": "Go to US",
-                "time": "2010-09-05",
-                "location": "1"
-            },
-            {
-                "task": "Come back China",
-                "time": "2010-09-15",
-                "location": "2"
-            },
-            {
-                "task": "Go to lab",
-                "time": "2010-09-20",
-                "location": "3"
-            },
-            {
-                "task": "Go to Shopping",
-                "time": "2010-09-25",
-                "location": "4"
-            },
-            {
-                "task": "Attend conference",
-                "time": "2010-09-30",
-                "location": "5"
-            },
-            {
-                "task": "View TV",
-                "time": "2010-10-01",
-                "location": "6"
-            },
-            {
-                "task": "View SAKAI",
-                "time": "2010-10-02",
-                "location": "7"
-            },
-            {
-                "task": "View Movie",
-                "time": "2010-10-01",
-                "location": "8"
-            },
-            {
-                "task": "Review papers",
-                "time": "2010-10-03",
-                "location": "9"
-            },
-            {
-                "task": "1sdfsdf papers",
-                "time": "2010-10-03",
-                "location": "10"
-            },
-            {
-                "task": "Go to US",
-                "time": "2010-09-05",
-                "location": "11"
-            },
-            {
-                "task": "Come back China",
-                "time": "2010-09-15",
-                "location": "12"
-            },
-            {
-                "task": "Go to lab",
-                "time": "2010-09-20",
-                "location": "13"
-            },
-            {
-                "task": "Go to Shopping",
-                "time": "2010-09-25",
-                "location": "14"
-            },
-            {
-                "task": "Attend conference",
-                "time": "2010-09-30",
-                "location": "15"
-            },
-            {
-                "task": "View TV",
-                "time": "2010-10-01",
-                "location": "16"
-            },
-            {
-                "task": "View SAKAI",
-                "time": "2010-10-02",
-                "location": "17"
-            },
-            {
-                "task": "View Movie",
-                "time": "2010-10-01",
-                "location": "18"
-            },
-            {
-                "task": "Review papers",
-                "time": "2010-10-03",
-                "location": "19"
-            },
-            {
-                "task": "1sdfsdf papers",
-                "time": "2010-10-03",
-                "location": "20"
-            }
-        ]
+        ctl = DriverControl.DriverController()
         submit_data = web.input()
         startIndex = int(submit_data['startIndex'])
         bufferSize = int(submit_data['bufferSize'])
-        pageData = []
-        i = 0
-        while i<bufferSize:
-            pageData.append(data[startIndex+i])
-            i=i+1
-        totalDataNo = len(data)
-        result = {'pageData': pageData, 'startIndex': startIndex, 'bufferSize':bufferSize}
-        print result
-        return result       
+        ret = ctl.getDrivers(startIndex, startIndex+bufferSize)
+        totalDataNo = ctl.count()
+        result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
+        return json.dumps(result)
 
+    def GET(self):
+        return render.listDriver()
+
+class ViewDriver(object):
+    def GET(self, id):
+        ctl = DriverControl.DriverController()
+        ret = ctl.getDriver(id)
+        if not ret:
+            return render.notFound()
+        return render.driver(ret)
+
+def _process_bslash(self, in_dict):
+    for k in in_dict.keys():
+        v=in_dict[k]
+        if type(v) == types.StringType or type(v) == types.UnicodeType:
+            v = re.sub(r'\\',r'\\\\', v)
+            v = re.sub(r'"',r'\\"', v)
+            v = re.sub(r"'",r"\\'", v)
+        in_dict[k] = v
 if __name__ == "__main__":
     app.run()

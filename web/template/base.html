@@ -3,8 +3,8 @@ $def with (main)
 <head>
     <title>$main.baseTitle</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="static/css/common.css" type="text/css">
-    <link rel="stylesheet" href="static/lib/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/common.css" type="text/css">
+    <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css" type="text/css">
 </head>
 <body>
     <div class="container">
@@ -17,11 +17,30 @@ $def with (main)
                 </div>
                 <div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="dashboard">Dashboard</a></li>
-                        <li ><a href="#">Driver</a></li>
-                        <li><a href="#">Case</a></li>
-                        <li><a href="#">Plan</a></li>
-                        <li><a href="#">Report</a></li>
+                    $if main.navTitle == 'dashboard':
+                        <li class="active"><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/driver">Driver</a></li>
+                        <li><a href="/case">Case</a></li>
+                        <li><a href="/plan">Plan</a></li>
+                        <li><a href="/report">Report</a></li>
+                    $elif main.navTitle == 'driver':
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li class="active"><a href="/driver">Driver</a></li>
+                        <li><a href="/case">Case</a></li>
+                        <li><a href="/plan">Plan</a></li>
+                        <li><a href="/report">Report</a></li>
+                    $elif main.navTitle == 'case':
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/driver">Driver</a></li>
+                        <li class="active"><a href="/case">Case</a></li>
+                        <li><a href="/plan">Plan</a></li>
+                        <li><a href="/report">Report</a></li>
+                    $else:
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/driver">Driver</a></li>
+                        <li><a href="/case">Case</a></li>
+                        <li><a href="/plan">Plan</a></li>
+                        <li><a href="/report">Report</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
@@ -38,7 +57,6 @@ $def with (main)
             </nav>
         </div>
         <!-- left -->
-        
         <!-- main -->
         <div class="main">
             $:main
@@ -48,10 +66,9 @@ $def with (main)
             <div>@author wangming</div>
         </div>
     </div>
-    
     <!-- js files -->
-    <script src="static/lib/jquery/jquery.min.js"></script>      
-    <script src="static/lib/bootstrap/js/bootstrap.min.js"></script>      
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
     $if main.jsFiles:
         $for js in main.jsFiles.split():
             <script src="$js"></script>

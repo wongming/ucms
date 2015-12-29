@@ -110,15 +110,15 @@ class MysqlWrapper:
         key_length = len(keylist)
         if key_length ==0:
             return ' '
-        cond_string = ' where '
+        cond_str = ' where '
         for index in range(key_length):
             key = keylist[index]
             value = str(cond_dict[key])
             if index != key_length - 1:
-                cond_string += ' %(colname)s = "%(colvalue)s" and ' % {'colname': key, 'colvalue': value}
+                cond_str += ' %(colname)s = "%(colvalue)s" and ' % {'colname': key, 'colvalue': value}
             else:
-                cond_string += ' %(colname)s = "%(colvalue)s" ' % {'colname': key, 'colvalue': value}
-        return cond_string
+                cond_str += ' %(colname)s = "%(colvalue)s" ' % {'colname': key, 'colvalue': value}
+        return cond_str
 
     def _convert_order_dict(self, order_dict):
         keylist = order_dict.keys()
@@ -134,6 +134,14 @@ class MysqlWrapper:
             else:
                 order_str += ' %(colname)s %(direction)s ' % {'colname': key, 'direction': value}
         return order_str
+
+    def _convert_text(self, text):
+        if isinstance(text, str) or isinstance(text, unicode):
+            try:
+                text = eval(text)
+            except:
+                pass
+        return text
 
     def insert_row(self, tableName, value_map):
         field_names_str = ''
@@ -179,8 +187,8 @@ class MysqlWrapper:
 
     def clear_rows_by_dict(self, tableName, cond_dict):
         keylist = cond_dict.keys()
-        cond_string = self._convert_cond_dict(cond_dict)
-        line = 'DELETE FROM %(tableName)s %(condition)s;' % {'tableName': tableName, 'condition': cond_string}
+        cond_str = self._convert_cond_dict(cond_dict)
+        line = 'DELETE FROM %(tableName)s %(condition)s;' % {'tableName': tableName, 'condition': cond_str}
         if not self.execute(line):
             self.logger.error('Clear rows from table: [%s] by condition: [%s] failed. Exit!' % (tableName, cond_dict))
             return False
@@ -230,7 +238,7 @@ class MysqlWrapper:
             self.logger.error('Row fields count dismatched. Expect: [%d], actual: [%d]' %(len(fields), len(row)))
             return row_map
         for i in range(0, len(row)):
-            row_map[fields[i]] = row[i]
+            row_map[fields[i]] = self._convert_text(row[i])
         return row_map
 
     def get_row_by_id(self, tableName, id, select_fields = '*'):
@@ -260,9 +268,20 @@ class MysqlWrapper:
             if len(row) != len(fields):
                 continue
             for i in range(len(row)):
-                row_map[fields[i]] = row[i]
+                row_map[fields[i]] = self._convert_text(row[i])
             rows.append(row_map)
         return rows
+
+    def count(self, tableName, cond_dict=None):
+        cond_str = ''
+        if cond_dict:
+            cond_str += self._convert_cond_dict(cond_dict)
+        line = 'select count(*) from %(tableName)s %(condition)s' \
+                % {'tableName': tableName, 'condition': cond_str}
+        rows = self.query(line)
+        if rows is None:
+            return -1
+        return rows[0][0]
 
     def isunique_by_value(self, tableName, cond_key, cond_value):
         return self.isunique_by_dict(tableName, {cond_key: cond_value})

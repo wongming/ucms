@@ -10,15 +10,11 @@ import traceback
 from BaseControl import BaseController
 from BaseControl import RT
 from table import AccountTable
+
 class AccountController(BaseController):
     def __init__(self):
         self.table = AccountTable()
-        pass
 
-    def get_account(self, id):
+    def getAccount(self, id):
         ret = self.table.select(id)
         return ret
-if __name__ == '__main__':
-    ctr = AccountController()
-    print ctr.get_account(1)
-    pass

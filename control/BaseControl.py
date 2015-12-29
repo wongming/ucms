@@ -18,13 +18,10 @@ import urllib
 import urllib2
 
 class RT(object):
-    SUCC = 1
-    EMPTY = 2
-    DUP = 3
-    IERR = 4
-    SVN_ERR = 5
-    NO_FILE = 6
-    STOP = 7
+    SUCC = 0
+    EMPTY = 1
+    DUP = 2
+    ERR = 3
 
 class BaseController(object):
     logging.config.fileConfig(cur_dir+'/../conf/log.conf')
@@ -46,8 +43,8 @@ class BaseController(object):
             err = traceback.format_exc()
             print err
             ret = (RT.IERR,'unknow reason')
-        return ret 
-    def _get_RTS(self, url): 
+        return ret
+    def _get_RTS(self, url):
         try:
             req = urllib2.Request(url)
             rep = urllib2.urlopen(req)
