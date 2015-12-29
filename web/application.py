@@ -6,6 +6,7 @@ cur_dir = os.path.split(os.path.realpath(__file__))[0]
 sys.path.append(cur_dir+'/../control/')
 
 import DriverControl
+import CaseControl
 
 web.config.debug = False
 
@@ -13,7 +14,9 @@ urls = (
     "/","Index",
     "/dashboard","Dashboard",
     "/driver","ListDriver",
-    "/driver/(.+)","ViewDriver"
+    "/driver/(.+)","ViewDriver",
+    "/case","ListCase",
+    "/case/(.+)","ViewCase"
 )
 
 app = web.application(urls, globals(), autoreload = False)
@@ -57,13 +60,26 @@ class ViewDriver(object):
             return render.notFound()
         return render.driver(ret)
 
-def _process_bslash(self, in_dict):
-    for k in in_dict.keys():
-        v=in_dict[k]
-        if type(v) == types.StringType or type(v) == types.UnicodeType:
-            v = re.sub(r'\\',r'\\\\', v)
-            v = re.sub(r'"',r'\\"', v)
-            v = re.sub(r"'",r"\\'", v)
-        in_dict[k] = v
+class ListCase(object):
+    def POST(self):
+        ctl = CaseControl.CaseController()
+        submit_data = web.input()
+        startIndex = int(submit_data['startIndex'])
+        bufferSize = int(submit_data['bufferSize'])
+        ret = ctl.getCases(startIndex, startIndex+bufferSize)
+        totalDataNo = ctl.count()
+        result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
+        return json.dumps(result)
+    def GET(self):
+        return render.listCase()
+
+class ViewCase(object):
+    def GET(self, id):
+        ctl = CaseControl.CaseController()
+        ret = ctl.getCase(id)
+        if not ret:
+            return render.notFound()
+        return render.case(ret)
+
 if __name__ == "__main__":
     app.run()

@@ -1,0 +1,56 @@
+$def with (case)
+$var baseTitle: Case Info
+$var navTitle: case
+$var jsFiles: /static/js/case.js
+<div class="container-fluid">
+    <div class="row">
+        <ol class="col-sm-9 breadcrumb">
+            <li><a href="case/list">当前位置:Case</a></li>
+            <li>$case["name"]</li>
+        </ol>
+        <div class="col-sm-3 breadcrumb" style="text-align: right;"><a href="case/add">Add Case</a></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Name:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$case['name']</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Driver:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$case['driver']</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Description:</label>
+            <div class="col-sm-9">
+                <pre>$case['description']</pr>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">变量:</label>
+            <div class="col-sm-7">
+                $if len(case['param']):
+                    <table class="table table-bordered">
+                        <thead class="breadcrumb">
+                            <tr>
+                                <th>Key</th>
+                                <th>默认值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            $for (k, v) in case['param'].items():
+                                <tr>
+                                    <td>$k</td>
+                                    <td>$v</td>
+                                </tr>
+                        </tbody>
+                    </table>
+                $else:
+                    <label class="control-label">no env params</label>
+            </div>
+        </div>
+    </div>
+</div>

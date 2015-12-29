@@ -22,6 +22,8 @@ RT = Result()
 class BaseTable(object):
     logging.config.fileConfig(os.path.join(cur_dir, 'log.conf'))
     logger = logging.getLogger("db")
+    def __init__(self):
+        self.db = mysql_wrapper.MysqlWrapper()
 
     def execute(self, line):
         return self.db_wrapper.execute(line)
@@ -45,60 +47,6 @@ class BaseTable(object):
                 v = re.sub(r'"',r'\\"', v)
                 v = re.sub(r"'",r"\\'", v)
             in_dict[k] = v
-
-def gen_field_str(field_dict):
-    return field_dict['name'] + ' ' + field_dict['type']  + ' ' + field_dict['attr']
-
-class AccountTable(BaseTable):
-    TABLE_NAME = 'T_ACCOUNT'
-    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
-    USERNAME = {'name':'username', 'type':'CHAR(40)', 'attr':'NOT NULL'}
-    PASSWORD = {'name':'password', 'type':'CHAR(40)', 'attr':'NOT NULL'}
-    NAME = {'name':'name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
-    IS_SUPER = {'name':'is_super', 'type':'BOOL', 'attr':'NOT NULL DEFAULT 0'}
-    CREATE_DATE = {'name':'create_date', 'type':'DATETIME', 'attr':'NOT NULL'}
-
-    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
-            + gen_field_str(ID) + ','\
-            + gen_field_str(USERNAME) + ','\
-            + gen_field_str(PASSWORD) + ','\
-            + gen_field_str(NAME) + ','\
-            + gen_field_str(IS_SUPER) + ','\
-            + gen_field_str(CREATE_DATE) + ','\
-            + 'PRIMARY KEY(id)'\
-            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
-
-    DROPtab_SQL = 'DROP table ' + TABLE_NAME
-
-    def __init__(self):
-        self.db = mysql_wrapper.MysqlWrapper()
-
-class DriverTable(BaseTable):
-    TABLE_NAME = 'T_DRIVER'
-    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
-    NAME = {'name':'name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
-    DESCRIPTION = {'name':'description', 'type':'TEXT', 'attr':''}
-    PARAM = {'name':'param', 'type':'TEXT', 'attr':'NOT NULL'}
-    SETUPPY = {'name':'setuppy', 'type':'TEXT', 'attr':'NOT NULL'}
-    TEARDOWNPY = {'name':'teardownpy', 'type':'TEXT', 'attr':'NOT NULL'}
-    EXECPY = {'name':'execpy', 'type':'TEXT', 'attr':'NOT NULL'}
-
-    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
-            + gen_field_str(ID) + ','\
-            + gen_field_str(NAME) + ','\
-            + gen_field_str(DESCRIPTION) + ','\
-            + gen_field_str(PARAM) + ','\
-            + gen_field_str(SETUPPY) + ','\
-            + gen_field_str(TEARDOWNPY) + ','\
-            + gen_field_str(EXECPY) + ','\
-            + 'PRIMARY KEY(id)'\
-            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
-
-    DROPtab_SQL = 'DROP table ' + TABLE_NAME
-
-    def __init__(self):
-        self.db = mysql_wrapper.MysqlWrapper()
-
     def select(self, id):
         ret = self.db.get_row_by_id(self.TABLE_NAME, id)
         if len(ret) == 0:
@@ -129,6 +77,53 @@ class DriverTable(BaseTable):
             return (RT.ERR, 'somthing error failed when insert item to %s' % self.TABLE_NAME)
         return (RT.SUCC, ret)
 
+def gen_field_str(field_dict):
+    return field_dict['name'] + ' ' + field_dict['type']  + ' ' + field_dict['attr']
+
+class AccountTable(BaseTable):
+    TABLE_NAME = 'T_ACCOUNT'
+    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
+    USERNAME = {'name':'username', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    PASSWORD = {'name':'password', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    NAME = {'name':'name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    IS_SUPER = {'name':'is_super', 'type':'BOOL', 'attr':'NOT NULL DEFAULT 0'}
+    CREATE_DATE = {'name':'create_date', 'type':'DATETIME', 'attr':'NOT NULL'}
+
+    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
+            + gen_field_str(ID) + ','\
+            + gen_field_str(USERNAME) + ','\
+            + gen_field_str(PASSWORD) + ','\
+            + gen_field_str(NAME) + ','\
+            + gen_field_str(IS_SUPER) + ','\
+            + gen_field_str(CREATE_DATE) + ','\
+            + 'PRIMARY KEY(id)'\
+            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
+
+    DROPtab_SQL = 'DROP table ' + TABLE_NAME
+
+class DriverTable(BaseTable):
+    TABLE_NAME = 'T_DRIVER'
+    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
+    NAME = {'name':'name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    DESCRIPTION = {'name':'description', 'type':'TEXT', 'attr':''}
+    PARAM = {'name':'param', 'type':'TEXT', 'attr':'NOT NULL'}
+    SETUPPY = {'name':'setuppy', 'type':'TEXT', 'attr':'NOT NULL'}
+    TEARDOWNPY = {'name':'teardownpy', 'type':'TEXT', 'attr':'NOT NULL'}
+    EXECPY = {'name':'execpy', 'type':'TEXT', 'attr':'NOT NULL'}
+
+    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
+            + gen_field_str(ID) + ','\
+            + gen_field_str(NAME) + ','\
+            + gen_field_str(DESCRIPTION) + ','\
+            + gen_field_str(PARAM) + ','\
+            + gen_field_str(SETUPPY) + ','\
+            + gen_field_str(TEARDOWNPY) + ','\
+            + gen_field_str(EXECPY) + ','\
+            + 'PRIMARY KEY(id)'\
+            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
+
+    DROPtab_SQL = 'DROP table ' + TABLE_NAME
+
 class CaseTable(BaseTable):
     TABLE_NAME = 'T_CASE'
     ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
@@ -147,9 +142,6 @@ class CaseTable(BaseTable):
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 
     DROPtab_SQL = 'DROP table ' + TABLE_NAME
-
-    def __init__(self):
-        self.db = mysql_wrapper.MysqlWrapper()
 
 class PlanTable(BaseTable):
     TABLE_NAME = 'T_PLAN'
@@ -174,9 +166,6 @@ class PlanTable(BaseTable):
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 
     DROPtab_SQL = 'DROP table ' + TABLE_NAME
-
-    def __init__(self):
-        self.db = mysql_wrapper.MysqlWrapper()
 
 if __name__ == '__main__':
     #DRIVER TEST

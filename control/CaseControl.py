@@ -15,12 +15,21 @@ class CaseController(BaseController):
         self.table = CaseTable()
         pass
 
-    def get_case(self, id):
+    def getCase(self, id):
         ret = self.table.select(id)
-        return ret
+        if not ret[0]==0:
+            return None
+        return ret[1]
         
-    def run_case(self, id):
-
+    def getCases(self, start, limit, cond_dict={}):
+        ret = self.table.selects(start, limit)
         return ret
+
+    def count(self,cond_dict={}):
+        ret = self.table.count(cond_dict)
+        if not ret[0]==0:
+            return 0
+        return ret[1]
+
 if __name__ == '__main__':
     pass
