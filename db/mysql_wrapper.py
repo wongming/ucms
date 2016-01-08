@@ -85,6 +85,7 @@ class MysqlWrapper:
         #print line
         'return None if query failed, return list is query success'
         try:
+            self.logger.debug("query cmd: " + line)
             if not self.execute(line):
                 self.logger.error('query line: [%s] failed.' % line)
                 return None
@@ -140,7 +141,9 @@ class MysqlWrapper:
             try:
                 text = eval(text)
             except:
-                pass
+                text = str(text)
+        elif isinstance(text, bytearray):
+            text = str(text)
         return text
 
     def insert_row(self, tableName, value_map):
@@ -267,6 +270,7 @@ class MysqlWrapper:
             row_map = dict()
             if len(row) != len(fields):
                 continue
+            print len(row)
             for i in range(len(row)):
                 row_map[fields[i]] = self._convert_text(row[i])
             rows.append(row_map)

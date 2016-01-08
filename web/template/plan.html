@@ -1,0 +1,51 @@
+$def with (plan)
+$var baseTitle: Plan Info
+$var navTitle: plan
+$var jsFiles: /static/js/plan.js
+<div class="container-fluid">
+    <div class="row">
+        <ol class="col-sm-9 breadcrumb">
+            <li><a href="plan/list">当前位置:Plan</a></li>
+            <li>$plan["name"]</li>
+        </ol>
+        <div class="col-sm-3 breadcrumb" style="text-align: right;"><a href="plan/add">Add Plan</a></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Name:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$plan['name']</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Case List:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$plan['case_list']</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">People:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$plan['people']</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">crontab:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$plan['crontab']</label>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Description:</label>
+            <div class="col-sm-9">
+                <pre>$plan['description']</pr>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label class="col-sm-2 text_align">Last Status:</label>
+            <div class="col-sm-9">
+                <label class="control-label">$plan['last_status']</label>
+            </div>
+        </div>
+    </div>
+</div>

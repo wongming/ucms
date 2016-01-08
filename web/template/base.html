@@ -35,6 +35,12 @@ $def with (main)
                         <li class="active"><a href="/case">Case</a></li>
                         <li><a href="/plan">Plan</a></li>
                         <li><a href="/report">Report</a></li>
+                    $elif main.navTitle == 'plan':
+                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/driver">Driver</a></li>
+                        <li><a href="/case">Case</a></li>
+                        <li class="active"><a href="/plan">Plan</a></li>
+                        <li><a href="/report">Report</a></li>
                     $else:
                         <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/driver">Driver</a></li>

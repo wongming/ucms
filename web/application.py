@@ -7,6 +7,7 @@ sys.path.append(cur_dir+'/../control/')
 
 import DriverControl
 import CaseControl
+import PlanControl
 
 web.config.debug = False
 
@@ -16,7 +17,9 @@ urls = (
     "/driver","ListDriver",
     "/driver/(.+)","ViewDriver",
     "/case","ListCase",
-    "/case/(.+)","ViewCase"
+    "/case/(.+)","ViewCase",
+    "/plan","ListPlan",
+    "/plan/(.+)","ViewPlan"
 )
 
 app = web.application(urls, globals(), autoreload = False)
@@ -80,6 +83,28 @@ class ViewCase(object):
         if not ret:
             return render.notFound()
         return render.case(ret)
+
+class ListPlan(object):
+    def POST(self):
+        ctl = PlanControl.PlanController()
+        submit_data = web.input()
+        startIndex = int(submit_data['startIndex'])
+        bufferSize = int(submit_data['bufferSize'])
+        ret = ctl.getPlans(startIndex, startIndex+bufferSize)
+        totalDataNo = ctl.count()
+        print ret[1]
+        result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
+        return json.dumps(result)
+    def GET(self):
+        return render.listPlan()
+
+class ViewPlan(object):
+    def GET(self, id):
+        ctl = PlanControl.PlanController()
+        ret = ctl.getPlan(id)
+        if not ret:
+            return render.notFound()
+        return render.plan(ret)
 
 if __name__ == "__main__":
     app.run()

@@ -1,18 +1,24 @@
-$var baseTitle: Driver List
-$var navTitle: driver
-$var jsFiles: static/lib/pageList/template.js static/lib/pageList/list.js static/js/ListDriver.js
+$var baseTitle: Plan List
+$var navTitle: plan
+$var jsFiles: static/lib/pageList/template.js static/lib/pageList/list.js static/js/ListPlan.js
 <textarea id="list_template" style="display: none;">
     <table class = "table table-striped table-hover">
         <thead>
         <tr>
-            <td>Driver Name</td>
+            <td>Plan Name</td>
+            <td>Last Status</td>
+            <td>People</td>
+            <td>Crontab</td>
             <td>Description</td>
         </tr>
         </thead>
         <tbody>
         {for item in pageData}
         <tr>
-            <td><a href="driver/$${item.id}">$${item.name}</a></td>
+            <td><a href="plan/$${item.id}">$${item.name}</a></td>
+            <td>$${item.last_status}</td>
+            <td>$${item.people}</td>
+            <td>$${item.crontab}</td>
             <td>$${item.description}</td>
         </tr>
         {/for}
