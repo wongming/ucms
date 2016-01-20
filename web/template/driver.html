@@ -2,67 +2,70 @@ $def with (driver)
 $var baseTitle: Driver Info
 $var navTitle: driver
 $var jsFiles: /static/js/driver.js
-<div class="container-fluid">
-    <div class="row">
-        <ol class="col-sm-9 breadcrumb">
-            <li><a href="driver/list">当前位置:Driver</a></li>
-            <li>$driver["name"]</li>
+<div class="title_bar">
+    <div class="title_path">
+        <ol class="breadcrumb">
+            <li class="top_path glyphicon glyphicon-home"></li>
+            <li class="top_path"><a href="/driver">Driver</a></li>
+            <li class="sub_path">$driver['name']</li>
         </ol>
-        <div class="col-sm-3 breadcrumb" style="text-align: right;"><a href="driver/add">Add Driver</a></div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <label class="col-sm-2 text_align">Name:</label>
-            <div class="col-sm-9">
-                <label class="control-label">$driver['name']</label>
-            </div>
+    <div class="title_operate">
+        <a href="/driver/del/$driver['id']"><button id ="view_del" class = "btn">删除</button></a>
+        <a href="/driver/mod/$driver['id']"><button id ="view_mod" class = "btn">修改</button></a>
+        <a href="/driver/add"><button id ="view_add" class = "btn">添加</button></a>
+    </div>
+</div>
+<div class="view_container">
+    <div class="col-md-12">
+        <label class="col-sm-2">Name:</label>
+        <label class="col-sm-10 control-label">$driver['name']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Description:</label>
+        <div class="col-sm-10">
+            <pre>$driver['description']</pr>
         </div>
-        <div class="col-md-12">
-            <label class="col-sm-2 text_align">Description:</label>
-            <div class="col-sm-9">
-                <pre>$driver['description']</pr>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <label class="col-sm-2 text_align">变量:</label>
-            <div class="col-sm-7">
-                $if len(driver['param']):
-                    <table class="table table-bordered">
-                        <thead class="breadcrumb">
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">变量:</label>
+        <div class="col-sm-7">
+            $if len(driver['param']):
+                <table class="table table-bordered">
+                    <thead class="breadcrumb">
+                        <tr>
+                            <th>Key</th>
+                            <th>默认值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        $for (k, v) in driver['param'].items():
                             <tr>
-                                <th>Key</th>
-                                <th>默认值</th>
+                                <td>$k</td>
+                                <td>$v</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            $for (k, v) in driver['param'].items():
-                                <tr>
-                                    <td>$k</td>
-                                    <td>$v</td>
-                                </tr>
-                        </tbody>
-                    </table>
-                $else:
-                    <label class="control-label">no env params</label>
-            </div>
+                    </tbody>
+                </table>
+            $else:
+                <label class="control-label">no env params</label>
         </div>
-        <div class="col-md-12">
-            <label class="col-sm-2 text_align">SetUp:</label>
-            <div class="col-sm-9">
-                <pre>$driver['setuppy']</pr>
-            </div>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">SetUp:</label>
+        <div class="col-sm-9">
+            <pre>$driver['setuppy']</pr>
         </div>
-        <div class="col-md-12">
-            <label class="col-sm-2 text_align">TearDown:</label>
-            <div class="col-sm-9">
-                <pre>$driver['teardownpy']</pr>
-            </div>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">TearDown:</label>
+        <div class="col-sm-9">
+            <pre>$driver['teardownpy']</pr>
         </div>
-        <div class="col-md-12">
-            <label class="col-sm-2 text_align">Exec:</label>
-            <div class="col-sm-9">
-                <pre>$driver['execpy']</pre>
-            </div>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Exec:</label>
+        <div class="col-sm-9">
+            <pre>$driver['execpy']</pre>
         </div>
     </div>
 </div>

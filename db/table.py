@@ -47,10 +47,18 @@ class BaseTable(object):
                 v = re.sub(r'"',r'\\"', v)
                 v = re.sub(r"'",r"\\'", v)
             in_dict[k] = v
+
     def select(self, id):
         ret = self.db.get_row_by_id(self.TABLE_NAME, id)
         if len(ret) == 0:
             self.logger.error('select item from %s failed and ID = [%s]' % (self.TABLE_NAME, id))
+            return (RT.ERR, '')
+        return [RT.SUCC, ret]
+
+    def selectByName(self, name):
+        ret = self.db.get_row(self.TABLE_NAME, 'name', name)
+        if len(ret) == 0:
+            self.logger.error('select item from %s failed and name = [%s]' % (self.TABLE_NAME, name))
             return (RT.ERR, '')
         return (RT.SUCC, ret)
 
@@ -66,7 +74,7 @@ class BaseTable(object):
         return (RT.SUCC, ret)
 
     def insert(self, item_dict):
-        #self._process_bslash(item_dict)
+        self._process_bslash(item_dict)
         cond_dict={}
         cond_dict['name'] = item_dict['name']
         if not self.db.isunique_by_dict(self.TABLE_NAME, cond_dict):
@@ -75,6 +83,16 @@ class BaseTable(object):
         ret = self.db.insert_row(self.TABLE_NAME, item_dict)
         if not ret:
             return (RT.ERR, 'somthing error failed when insert item to %s' % self.TABLE_NAME)
+        return (RT.SUCC, ret)
+
+    def update(self, cond_dict, value_map):
+        ret = self.db.update_value_by_dict(self.TABLE_NAME, cond_dict, value_map)
+        if not ret:
+            return (RT.ERR, 'somthing error failed when update item to %s' % self.TABLE_NAME)
+        return (RT.SUCC, ret)
+
+    def selectAll(self,cond_dict={}):
+        ret = self.db.get_all_rows_by_dict(self.TABLE_NAME, cond_dict)
         return (RT.SUCC, ret)
 
 def gen_field_str(field_dict):
@@ -143,6 +161,30 @@ class CaseTable(BaseTable):
 
     DROPtab_SQL = 'DROP table ' + TABLE_NAME
 
+class CaseResultTable(BaseTable):
+    TABLE_NAME = 'T_CASE_RESULT'
+    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
+    CASENAME = {'name':'case_name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    STATUS = {'name':'description', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    LOG = {'name':'driver', 'type':'CHAR(100)', 'attr':''}
+    STARTTIME = {'name':'start_time', 'type':'DATETIME', 'attr':''}
+    STOPTIME = {'name':'stop_time', 'type':'DATETIME', 'attr':''}
+    USER = {'name':'user', 'type':'CHAR(40)', 'attr':''}
+    DESCRIPTION = {'name':'description', 'type':'TEXT', 'attr':''}
+
+    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
+            + gen_field_str(ID) + ','\
+            + gen_field_str(CASENAME) + ','\
+            + gen_field_str(STATUS) + ','\
+            + gen_field_str(LOG) + ','\
+            + gen_field_str(STARTTIME) + ','\
+            + gen_field_str(STOPTIME) + ','\
+            + gen_field_str(DESCRIPTION) + ','\
+            + 'PRIMARY KEY(id)'\
+            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
+
+    DROPtab_SQL = 'DROP table ' + TABLE_NAME
+
 class PlanTable(BaseTable):
     TABLE_NAME = 'T_PLAN'
     ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
@@ -153,7 +195,6 @@ class PlanTable(BaseTable):
     CRONTAB = {'name':'crontab', 'type':'CHAR(100)', 'attr':'NOT NULL'}
     PEOPLE = {'name':'poeple', 'type':'TEXT', 'attr':'NOT NULL'}
 
-
     CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
             + gen_field_str(ID) + ','\
             + gen_field_str(NAME) + ','\
@@ -162,6 +203,30 @@ class PlanTable(BaseTable):
             + gen_field_str(LASE_STATUS) + ','\
             + gen_field_str(CRONTAB) + ','\
             + gen_field_str(PEOPLE) + ','\
+            + 'PRIMARY KEY(id)'\
+            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
+
+    DROPtab_SQL = 'DROP table ' + TABLE_NAME
+
+class PlanResultTable(BaseTable):
+    TABLE_NAME = 'T_CASE_RESULT'
+    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
+    PLAN = {'name':'case', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    STATUS = {'name':'description', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    LOG = {'name':'driver', 'type':'CHAR(100)', 'attr':'NOT NULL'}
+    STARTTIME = {'name':'start_time', 'type':'DATETIME', 'attr':'NOT NULL'}
+    STOPTIME = {'name':'stop_time', 'type':'DATETIME', 'attr':'NOT NULL'}
+    USER = {'name':'user', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    DESCRIPTION = {'name':'description', 'type':'TEXT', 'attr':''}
+
+    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
+            + gen_field_str(ID) + ','\
+            + gen_field_str(PLAN) + ','\
+            + gen_field_str(STATUS) + ','\
+            + gen_field_str(LOG) + ','\
+            + gen_field_str(STARTTIME) + ','\
+            + gen_field_str(STOPTIME) + ','\
+            + gen_field_str(DESCRIPTION) + ','\
             + 'PRIMARY KEY(id)'\
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 

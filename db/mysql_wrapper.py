@@ -223,7 +223,7 @@ class MysqlWrapper:
         return self.execute(sql_str)
 
     def get_row(self, tableName, id_name, id_value, select_fields = '*'):
-        line = 'select %(field)s from %(tableName)s where %(id_name)s = %(id_value)s;' % {'field': select_fields, 'tableName':tableName, 'id_name':id_name, 'id_value':id_value}
+        line = 'select %(field)s from %(tableName)s where %(id_name)s = "%(id_value)s";' % {'field': select_fields, 'tableName':tableName, 'id_name':id_name, 'id_value':id_value}
         rows = self.query(line)
 
         if select_fields == '*':
@@ -246,6 +246,31 @@ class MysqlWrapper:
 
     def get_row_by_id(self, tableName, id, select_fields = '*'):
         return self.get_row(tableName, 'id', id, select_fields)
+
+    def get_all_rows_by_dict(self, tableName, cond_dict, select_fields = '*', order_dict={}):
+        order_str = self._convert_order_dict(order_dict)
+        cond_str = self._convert_cond_dict(cond_dict)
+        line = 'select %(fields)s from %(tableName)s %(condition)s %(order)s;' \
+                % {'fields': select_fields, 'tableName': tableName, 'condition': cond_str, 'order': order_str}
+        row_data = self.query(line)
+        if row_data == None or len(row_data) == 0:
+            #self.logger.warning('Get rows from table: [%s] failed.' % tableName)
+            return list()
+        rows = list()
+        if select_fields == '*':
+            fields = self._get_all_fields(tableName)
+        else:
+            splited_fields = select_fields.split(',')
+            fields = [fd.strip() for fd in splited_fields if fd.strip() != '']
+
+        for row in row_data:
+            row_map = dict()
+            if len(row) != len(fields):
+                continue
+            for i in range(len(row)):
+                row_map[fields[i]] = self._convert_text(row[i])
+            rows.append(row_map)
+        return rows
 
     def get_rows(self, tableName, start, limit, select_fields = '*', order_dict={}):
         return self.get_rows_by_dict(tableName, start, limit, {}, select_fields =select_fields, order_dict=order_dict)
@@ -270,7 +295,6 @@ class MysqlWrapper:
             row_map = dict()
             if len(row) != len(fields):
                 continue
-            print len(row)
             for i in range(len(row)):
                 row_map[fields[i]] = self._convert_text(row[i])
             rows.append(row_map)

@@ -1,0 +1,59 @@
+$def with ()
+$var baseTitle: Add Plan
+$var navTitle: plan
+$var jsFiles: /static/js/addPlan.js
+<div class="title_bar">
+    <div class="title_path">
+        <ol class="breadcrumb">
+            <li class="top_path glyphicon glyphicon-home"></li>
+            <li class="top_path"><a href="/plan">Plan</a></li>
+            <li class="sub_path">添加</li>
+        </ol>
+    </div>
+    <div class="title_operate">
+        <a href="/plan"><button class="btn">返回</button></a>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="col-md-12">
+        <form class="form-horizontal" role="form" id="add_plan_form" action="/plan/add" method="post">
+        	<div class="form-group">
+            	<label class="col-sm-2 control-label">Name:</label>
+            	<div class="col-sm-3">
+                	<input type="text" class="form-control" id="plan-name-add" name="name">
+            	</div>
+        	</div>
+          <div class="form-group">
+            	<label class="col-sm-2 control-label">Case List:</label>
+            	<div class="col-sm-3">
+                	<input type="text" class="form-control" id="plan-desc-add" name="case_list">
+            	</div>
+        	</div>
+          <div class="form-group">
+            	<label class="col-sm-2 control-label">Crontab:</label>
+            	<div class="col-sm-3">
+                	<input type="text" class="form-control" id="add-plan-desc" name="crontab">
+            	</div>
+        	</div>
+          <div class="form-group">
+            	<label class="col-sm-2 control-label">People:</label>
+            	<div class="col-sm-3">
+                	<input type="text" class="form-control" id="add-plan-desc" name="people">
+            	</div>
+        	</div>
+        	<div class="form-group">
+            	<label class="col-sm-2 control-label">Description:</label>
+            	<div class="col-sm-3">
+                	<input type="text" class="form-control" id="add-plan-desc" name="description">
+            	</div>
+        	</div>
+
+        </form>
+        <div class="form-group">
+            <div class="col-sm-offset-7 col-sm-2">
+                <a href="/plan/list" type="button" class="btn btn-default">Cancel</a>
+                <button id="add-plan-submit-btn" type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

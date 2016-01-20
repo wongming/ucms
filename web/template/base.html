@@ -3,62 +3,54 @@ $def with (main)
 <head>
     <title>$main.baseTitle</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/static/css/common.css" type="text/css">
     <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/common.css" type="text/css">
 </head>
 <body>
     <div class="container">
         <!-- header -->
         <div class="header">
             <!-- nav -->
-            <nav class="navbar navbar-default" role="navigation">
+            <nav class="navbar" role="navigation">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">ATRS</a>
+                    <a class="navbar-brand" href="/dashboard">自动化测试与发布/ATRS</a>
                 </div>
                 <div>
                     <ul class="nav navbar-nav">
-                    $if main.navTitle == 'dashboard':
-                        <li class="active"><a href="/dashboard">Dashboard</a></li>
-                        <li><a href="/driver">Driver</a></li>
-                        <li><a href="/case">Case</a></li>
-                        <li><a href="/plan">Plan</a></li>
-                        <li><a href="/report">Report</a></li>
-                    $elif main.navTitle == 'driver':
-                        <li><a href="/dashboard">Dashboard</a></li>
+                    $if main.navTitle == 'driver':
                         <li class="active"><a href="/driver">Driver</a></li>
                         <li><a href="/case">Case</a></li>
                         <li><a href="/plan">Plan</a></li>
-                        <li><a href="/report">Report</a></li>
+                        <li><a href="/app">App</a></li>
                     $elif main.navTitle == 'case':
-                        <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/driver">Driver</a></li>
                         <li class="active"><a href="/case">Case</a></li>
                         <li><a href="/plan">Plan</a></li>
-                        <li><a href="/report">Report</a></li>
+                        <li><a href="/app">App</a></li>
                     $elif main.navTitle == 'plan':
-                        <li><a href="/dashboard">Dashboard</a></li>
                         <li><a href="/driver">Driver</a></li>
                         <li><a href="/case">Case</a></li>
                         <li class="active"><a href="/plan">Plan</a></li>
-                        <li><a href="/report">Report</a></li>
-                    $else:
-                        <li><a href="/dashboard">Dashboard</a></li>
+                        <li><a href="/app">App</a></li>
+                    $elif main.navTitle == 'app':
                         <li><a href="/driver">Driver</a></li>
                         <li><a href="/case">Case</a></li>
                         <li><a href="/plan">Plan</a></li>
-                        <li><a href="/report">Report</a></li>
+                        <li class="active"><a href="/app">App</a></li>
+                    $else:
+                        <li><a href="/driver">Driver</a></li>
+                        <li><a href="/case">Case</a></li>
+                        <li><a href="/plan">Plan</a></li>
+                        <li><a href="/release">发布</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a style="padding-right: 25px;" href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    Admin <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="self">个人管理</a></li>
-                                </ul>
-                 </li>
-                            </li>
-                        </ul>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle glyphicon glyphicon-user" data-toggle="dropdown">Admin<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="self">个人管理</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>

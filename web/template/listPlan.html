@@ -1,6 +1,19 @@
 $var baseTitle: Plan List
 $var navTitle: plan
 $var jsFiles: static/lib/pageList/template.js static/lib/pageList/list.js static/js/ListPlan.js
+<div class="title_header">
+    <div class="title_path">
+        <ol class="breadcrumb">
+          <li class="top_path glyphicon glyphicon-home"></li>
+          <li class="top_path"><a href="/case">Case</a></li>
+          <li class="sub_path">列表</li>
+        </ol>
+    </div>
+    <div class="list_search">
+        <span class="list_search_icon glyphicon glyphicon-search"></span>
+        <input class="input-medium search-query list_search_input" type="text" id="list_search_input" placeholder="Type keyword here…">
+    </div>
+</div>
 <textarea id="list_template" style="display: none;">
     <table class = "table table-striped table-hover">
         <thead>
@@ -26,15 +39,19 @@ $var jsFiles: static/lib/pageList/template.js static/lib/pageList/list.js static
     </table>
 </textarea>
 <div id="list_container" style="display: none;"></div>
-<table>
+<table class="list_bottom">
     <tr>
-        <td colspan="3" id="list_td_foot">
+        <td class="list_operate">
+            <a href="/plan/add"><button id ="list_add" class = "btn">添加</button></a>
+            <button id ="list_del" class = "btn">删除</button>
+        </td>
+        <td class="list_info" id="list_td_foot">
             共<span id="list_totalDataNo"></span>条
             每页显示<input id="list_pageSize" type="text"/>条
             <button id ="list_firstPage" class = "btn">首页</button>
             <button id ="list_prevPage" class = "btn">上一页</button>
-            <input id="list_currentPageNo" type="text"></input>/
-            <span id="list_pageNo"></span>
+            第<input id="list_currentPageNo" type="text"></input>/
+            <span id="list_pageNo"></span>页
             <button id ="list_nextPage" class = "btn" >下一页</button>
             <button id ="list_lastPage" class = "btn" >末页</button>
         </td>

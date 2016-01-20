@@ -22,7 +22,7 @@ var pageListShow = function (conf) {
             pageInfo.postUrl = conf.postUrl;
         } else {
             alert("error:postUrl not configured");
-            return
+            return;
         }
         pageInfo.currentPageNo = 1;
         pageInfo.totalDataNo = 0;
@@ -30,7 +30,7 @@ var pageListShow = function (conf) {
         pageInfo.pageData = [];
         pageInfo.arrayData = [];
         pageInfo.startIndex = 0;
-        pageInfo.postData = {"bufferSize": pageInfo.bufferSize, "startIndex":0}
+        pageInfo.postData = {"bufferSize": pageInfo.bufferSize, "startIndex":0};
     };
 
     var loadData = function () {
@@ -48,10 +48,13 @@ var pageListShow = function (conf) {
             }
         } else {
             pageInfo.arrayData[0] = {"pageData": pageInfo.pageData};
-        };
+        }
     };
 
     var loadTemplate = function (json) {
+        if(typeof(json) == "undefined"){
+            json = {"pageData":[]};
+        }
         $("#list_totalDataNo").text(pageInfo.totalDataNo);
         $("#list_pageSize").val(pageInfo.pageSize);
         $("#list_currentPageNo").val(pageInfo.currentPageNo);
@@ -64,7 +67,7 @@ var pageListShow = function (conf) {
     var changePageSize = function(pageSize){
         if (pageSize>0 && pageSize<= pageInfo.bufferSize){
             pageInfo.pageSize = pageSize;
-        };
+        }
         pageInfo.currentPageNo = Math.floor(pageInfo.startIndex/pageInfo.pageSize+1);
         pageInfo.startPageNo = Math.floor(pageInfo.startIndex/pageInfo.pageSize+1);
         pageInfo.endPageNo = pageInfo.startPageNo+Math.ceil(pageInfo.pageData.length/pageInfo.pageSize)-1;
@@ -82,8 +85,8 @@ var pageListShow = function (conf) {
                 pageInfo.currentPageNo = 1;
                 pageInfo.postData={"bufferSize": pageInfo.bufferSize, "startIndex": 0};
                 showPage();
-            };
-        };
+            }
+        }
     };
 
     var showLastPage = function(){
@@ -98,8 +101,8 @@ var pageListShow = function (conf) {
                     "startIndex": (Math.ceil(pageInfo.totalDataNo/pageInfo.bufferSize) - 1) * pageInfo.bufferSize
                 };
                 showPage();
-            };
-        };
+            }
+        }
     };
 
     var showPrevPage = function(){
@@ -112,14 +115,14 @@ var pageListShow = function (conf) {
                 var startIndex = (pageInfo.currentPageNo - pageInfo.bufferSize/pageInfo.pageSize) * pageInfo.pageSize;
                 if (startIndex<0) {
                     startIndex = 0;
-                };
+                }
                 pageInfo.postData={
                     "bufferSize": pageInfo.bufferSize,
                     "startIndex": startIndex
                 };
                 showPage();
-            };
-        };
+            }
+        }
     };
 
     var showNextPage = function(){
@@ -134,8 +137,8 @@ var pageListShow = function (conf) {
                     "startIndex": (pageInfo.currentPageNo-1)* pageInfo.pageSize
                 };
                 showPage();
-            };
-        };
+            }
+        }
     };
 
     var toPageNo = function(pageNo){
@@ -156,8 +159,8 @@ var pageListShow = function (conf) {
                     "startIndex": startIndex
                 };
                 showPage();
-            };
-        };
+            }
+        }
     };
 
     var showPage = function () {

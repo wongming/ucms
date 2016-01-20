@@ -9,25 +9,126 @@
 html {overflow-y: scroll;}
 .modal {overflow: hidden;}
 body {
-    padding-top: 14px;
-    font-family: "黑体" "Microsoft YaHei";
-    line-height:1.5em;
+  padding-top: 5px;
+  font-family: "黑体" "Microsoft YaHei";
 }
-.container {
-    width: 1024px !important;
+button {
+  color: white;
+  background-color: rgb(100, 153, 204);
 }
 /***************** header *******************/
-
+.active {
+  background-color: rgb(15, 50, 100);
+}
+.header {
+  background-color: rgb(35, 108, 180);
+}
+.header nav a {
+  border-style: solid;
+  border-width: 0 1px 0 1px;
+  border-color: rgb(33, 103, 172);
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+.header nav a:hover {
+  background-color: rgb(15, 50, 100);
+}
+.navbar-right {
+  float: right!important;
+  margin-right: 0;
+}
 /***************** footer *******************/
 .footer {
-	font-size: 12px;
+	font-size: 15px;
 	text-align: center;
-	background-color: #f8f8f8;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	height: 40px;
 	font-family:宋体;
 }
+/***************** main ********************/
+.main {
+  margin-top: -10px;
+}
+/***************** title_bar ********************/
+.title_header {
+  background-color: #f5f5f5;
+  margin: 0;
+  height: 36px;
+}
+.title_path {
+  float: left;
+  width: 60%;
+}
+.title_path ol{
+  margin-bottom: 2;
+}
+.top_path {
 
+}
+.sub_path {
 
-/***************** module ********************/
+}
+.list_search {
+  float: right;
+  width: 40%;
+  margin-top: 5px
+}
+.list_search_input {
+  float: right;
+}
+.list_search_icon {
+  float: right;
+  margin: 6px;
+}
+.title_operate {
+  width: 40%;
+  background-color: #f5f5f5;
+  float: right;
+}
+.title_operate button{
+  margin: 2px;
+  float: right;
+}
+/***************** list ********************/
+#list_container {
+  margin: 0 0 -10px 0;
+}
+#list_container thead td{
+  border-style: ridge;
+  border-width: 1px;
+  border-color: rgb(179, 196, 213);
+  background-color: rgb(100, 153, 204);
+  color: white;
+}
+#list_container tbody td{
+  border-style: ridge;
+  border-width: 1px;
+  border-color: rgb(179, 196, 213);
+}
+#list_pageSize {
+  width: 40px;
+}
+#list_currentPageNo {
+  width: 50px;
+}
+/***************** list_header ********************/
+
+/***************** list_bottom ********************/
+.list_bottom {
+  width: 100%;
+  margin-top: -18px;
+}
+.list_bottom tr{
+  background-color: #f5f5f5;
+}
+.list_operate {
+  text-align: left;
+}
+.list_info {
+  text-align: right;
+}
+/***************** view_bottom ********************/
+.view_group {
+  float: left;
+}
