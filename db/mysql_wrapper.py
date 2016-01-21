@@ -5,6 +5,7 @@ sys.setdefaultencoding('utf8')
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, cur_dir)
 #import string_util
+import datetime
 import mysql.connector
 from mysql.connector.conversion import *
 try:
@@ -144,6 +145,8 @@ class MysqlWrapper:
                 text = str(text)
         elif isinstance(text, bytearray):
             text = str(text)
+        elif isinstance(text, datetime.datetime):
+            text = str(text)
         return text
 
     def insert_row(self, tableName, value_map):
@@ -158,6 +161,8 @@ class MysqlWrapper:
                 continue
             field_names_str += field_name
             if type(field_value) == int:
+                field_value = str(field_value)
+            elif type(field_value) == datetime.datetime:
                 field_value = str(field_value)
             field_values_str += '"' + field_value + '"'
             if (index != key_length - 1):

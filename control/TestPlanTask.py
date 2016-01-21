@@ -14,8 +14,9 @@ logger = logging.getLogger('plantask')
 class TestPlanTask(threading.Thread):
     def __init__(self, plan_result):
         self.plan_result_id = plan_result['id']
-        self.plan_name = plan_result['plan']
-        self.plan_path = cur_dir+'/../workbench/plan/'+self.plan_name
+        self.plan_name = plan_result['plan_name']
+        self.plan_path = cur_dir+'/../workbench/'+self.plan_name+'.json'
+        self.log_path = cur_dir+'/../workbench/log/tp_'+self.plan_name+'_id_'+str(self.plan_result_id)+'.log'
         self.planTable = PlanTable()
         self.planResultTable = PlanResultTable()
         super(TestPlanTask, self).__init__()
@@ -32,10 +33,16 @@ class TestPlanTask(threading.Thread):
         if not ret[0]==RT.SUCC:
             logger.error('update PlanResultTable [%s] failed' % self.plan_result_id)
             return
-        result = stest.runCase(self.plan_name)
-        ret = self.planResultTable.update({'id': self.plan_result_id}, {'status': 'success', 'start_time':datetime.datetime.now()})
+        test_result = stest.runPlan(self.plan_path)
+        test_status = 'success' if test_result.wasSuccessful() else 'failed'
+        test_start_time =test_result.startTime
+        test_stop_time = test_result.stopTime
+        log_file = open(self.log_path,'w')
+        log_file.write(test_result.log.getvalue())
+        log_file.close()
+        ret = self.planResultTable.update({'id': self.plan_result_id}, {'status': test_status, 'start_time': test_start_time, 'stop_time': test_stop_time,'log':self.log_path})
         if not ret[0]==RT.SUCC:
-            logger.error('update PlanResultTable [%s] failed' % self.plan_result_id)
+            logger.error("update PlanResultTable's result [%s] failed" % self.plan_result_id)
             return
 
     def run(self):
@@ -53,9 +60,7 @@ def startPlanTask():
         if not len(tp_result_list)==0:
             for tp_result in tp_result_list:
                 tp_task = TestPlanTask(tp_result)
-                tp_tasks.append(tp_task)
-            for task in tp_tasks:
-                task.start()
+                tp_task.run()
         else:
             logger.info('none plan task found...')
             #print 'none plan task found...'

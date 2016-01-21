@@ -1,0 +1,65 @@
+[2016-01-20 16:39:20,588][46984][INFO][TestCaseTask.py:prepareTask:25]: prepare case task [case_demo_1],[5]
+[2016-01-20 16:39:20,588][46984][INFO][TestCaseTask.py:runTask:31]: start run case task
+[2016-01-20 16:39:20,599][46984][ERROR][TestCaseTask.py:runTask:44]: update CaseResultTable's result [5] failed
+[2016-01-20 16:39:20,599][46984][INFO][TestCaseTask.py:stopTask:28]: stop case task[case_demo_1],[5]
+[2016-01-20 16:41:22,343][47030][INFO][TestCaseTask.py:prepareTask:25]: prepare case task [case_demo_1],[6]
+[2016-01-20 16:41:22,344][47030][INFO][TestCaseTask.py:runTask:31]: start run case task
+[2016-01-20 16:41:22,351][47030][ERROR][TestCaseTask.py:runTask:45]: update CaseResultTable's result [6] failed
+[2016-01-20 16:41:22,351][47030][INFO][TestCaseTask.py:stopTask:28]: stop case task[case_demo_1],[6]
+[2016-01-20 16:45:49,450][47109][INFO][TestCaseTask.py:prepareTask:25]: prepare case task [case_demo_1],[6]
+[2016-01-20 16:45:49,450][47109][INFO][TestCaseTask.py:runTask:31]: start run case task
+[2016-01-20 16:45:49,458][47109][ERROR][TestCaseTask.py:runTask:43]: update CaseResultTable's result [6] failed
+[2016-01-20 16:45:49,458][47109][INFO][TestCaseTask.py:stopTask:28]: stop case task[case_demo_1],[6]
+[2016-01-20 16:47:45,407][47163][INFO][TestCaseTask.py:prepareTask:25]: prepare case task [case_demo_1],[6]
+[2016-01-20 16:47:45,407][47163][INFO][TestCaseTask.py:runTask:31]: start run case task
+[2016-01-20 16:47:45,418][47163][INFO][TestCaseTask.py:stopTask:28]: stop case task[case_demo_1],[6]
+[2016-01-20 17:08:17,547][47287][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[7]
+[2016-01-20 17:08:17,547][47287][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:09:32,251][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[7]
+[2016-01-20 17:09:32,251][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:09:32,283][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[7]
+[2016-01-20 17:13:21,133][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[9]
+[2016-01-20 17:13:21,133][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:13:21,142][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[9]
+[2016-01-20 17:14:00,785][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[10]
+[2016-01-20 17:14:00,785][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:14:00,794][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[10]
+[2016-01-20 17:18:04,716][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[11]
+[2016-01-20 17:18:04,717][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:18:04,726][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[11]
+[2016-01-20 17:18:23,804][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[12]
+[2016-01-20 17:18:23,804][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:18:23,818][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[12]
+[2016-01-20 17:19:56,168][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[13]
+[2016-01-20 17:19:56,168][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:19:56,177][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[13]
+[2016-01-20 17:20:34,316][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[14]
+[2016-01-20 17:20:34,316][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:20:34,324][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[14]
+[2016-01-20 17:20:47,881][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[15]
+[2016-01-20 17:20:47,881][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:20:47,895][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[15]
+[2016-01-20 17:20:56,920][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[16]
+[2016-01-20 17:20:56,922][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:20:56,937][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[16]
+[2016-01-20 17:21:19,013][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[17]
+[2016-01-20 17:21:19,013][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:21:19,028][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[17]
+[2016-01-20 17:21:43,118][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[18]
+[2016-01-20 17:21:43,119][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:21:43,123][47448][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[18]
+[2016-01-20 17:21:43,124][47448][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:21:43,152][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[18]
+[2016-01-20 17:21:43,163][47448][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[18]
+[2016-01-20 17:21:50,161][47346][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[19]
+[2016-01-20 17:21:50,161][47448][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[19]
+[2016-01-20 17:21:50,161][47346][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:21:50,161][47448][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:21:50,170][47448][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[19]
+[2016-01-20 17:21:50,176][47346][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[19]
+[2016-01-20 17:22:33,979][47510][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[20]
+[2016-01-20 17:22:33,980][47510][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:22:33,999][47510][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[20]
+[2016-01-20 17:23:44,831][47546][INFO][TestCaseTask.py:prepareTask:26]: prepare case task [case_demo_1],[21]
+[2016-01-20 17:23:44,831][47546][INFO][TestCaseTask.py:runTask:32]: start run case task
+[2016-01-20 17:23:44,843][47546][INFO][TestCaseTask.py:stopTask:29]: stop case task[case_demo_1],[21]

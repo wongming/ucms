@@ -62,8 +62,8 @@ class BaseTable(object):
             return (RT.ERR, '')
         return (RT.SUCC, ret)
 
-    def selects(self, start, limit, cond_dict={}):
-        ret = self.db.get_rows_by_dict(self.TABLE_NAME, start, limit, cond_dict)
+    def selects(self, start, limit, cond_dict={}, order_dict={}):
+        ret = self.db.get_rows_by_dict(self.TABLE_NAME, start, limit, cond_dict, order_dict=order_dict)
         return (RT.SUCC, ret)
 
     def count(self, cond_dict={}):
@@ -83,7 +83,7 @@ class BaseTable(object):
         ret = self.db.insert_row(self.TABLE_NAME, item_dict)
         if not ret:
             return (RT.ERR, 'somthing error failed when insert item to %s' % self.TABLE_NAME)
-        return (RT.SUCC, ret)
+        return (RT.SUCC, '')
 
     def update(self, cond_dict, value_map):
         ret = self.db.update_value_by_dict(self.TABLE_NAME, cond_dict, value_map)
@@ -91,8 +91,8 @@ class BaseTable(object):
             return (RT.ERR, 'somthing error failed when update item to %s' % self.TABLE_NAME)
         return (RT.SUCC, ret)
 
-    def selectAll(self,cond_dict={}):
-        ret = self.db.get_all_rows_by_dict(self.TABLE_NAME, cond_dict)
+    def selectAll(self,cond_dict={}, order_dict={}):
+        ret = self.db.get_all_rows_by_dict(self.TABLE_NAME, cond_dict, order_dict=order_dict)
         return (RT.SUCC, ret)
 
 def gen_field_str(field_dict):
@@ -165,8 +165,9 @@ class CaseResultTable(BaseTable):
     TABLE_NAME = 'T_CASE_RESULT'
     ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
     CASENAME = {'name':'case_name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    CREATETIME = {'name':'create_time', 'type':'DATETIME', 'attr':''}
     STATUS = {'name':'description', 'type':'CHAR(40)', 'attr':'NOT NULL'}
-    LOG = {'name':'driver', 'type':'CHAR(100)', 'attr':''}
+    LOG = {'name':'driver', 'type':'TEXT', 'attr':''}
     STARTTIME = {'name':'start_time', 'type':'DATETIME', 'attr':''}
     STOPTIME = {'name':'stop_time', 'type':'DATETIME', 'attr':''}
     USER = {'name':'user', 'type':'CHAR(40)', 'attr':''}
@@ -175,6 +176,7 @@ class CaseResultTable(BaseTable):
     CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
             + gen_field_str(ID) + ','\
             + gen_field_str(CASENAME) + ','\
+            + gen_field_str(CREATETIME) + ','\
             + gen_field_str(STATUS) + ','\
             + gen_field_str(LOG) + ','\
             + gen_field_str(STARTTIME) + ','\
@@ -184,6 +186,12 @@ class CaseResultTable(BaseTable):
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 
     DROPtab_SQL = 'DROP table ' + TABLE_NAME
+    def insert(self, item_dict):
+        self._process_bslash(item_dict)
+        ret = self.db.insert_row(self.TABLE_NAME, item_dict)
+        if not ret:
+            return (RT.ERR, 'somthing error failed when insert item to %s' % self.TABLE_NAME)
+        return (RT.SUCC, '')
 
 class PlanTable(BaseTable):
     TABLE_NAME = 'T_PLAN'
@@ -209,11 +217,12 @@ class PlanTable(BaseTable):
     DROPtab_SQL = 'DROP table ' + TABLE_NAME
 
 class PlanResultTable(BaseTable):
-    TABLE_NAME = 'T_CASE_RESULT'
+    TABLE_NAME = 'T_PLAN_RESULT'
     ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
-    PLAN = {'name':'case', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    PLANNAME = {'name':'plan_name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    CREATETIME = {'name':'create_time', 'type':'DATETIME', 'attr':''}
     STATUS = {'name':'description', 'type':'CHAR(40)', 'attr':'NOT NULL'}
-    LOG = {'name':'driver', 'type':'CHAR(100)', 'attr':'NOT NULL'}
+    LOG = {'name':'driver', 'type':'text', 'attr':'NOT NULL'}
     STARTTIME = {'name':'start_time', 'type':'DATETIME', 'attr':'NOT NULL'}
     STOPTIME = {'name':'stop_time', 'type':'DATETIME', 'attr':'NOT NULL'}
     USER = {'name':'user', 'type':'CHAR(40)', 'attr':'NOT NULL'}
@@ -221,7 +230,8 @@ class PlanResultTable(BaseTable):
 
     CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
             + gen_field_str(ID) + ','\
-            + gen_field_str(PLAN) + ','\
+            + gen_field_str(PLANNAME) + ','\
+            + gen_field_str(CREATETIME) + ','\
             + gen_field_str(STATUS) + ','\
             + gen_field_str(LOG) + ','\
             + gen_field_str(STARTTIME) + ','\
@@ -231,6 +241,12 @@ class PlanResultTable(BaseTable):
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 
     DROPtab_SQL = 'DROP table ' + TABLE_NAME
+    def insert(self, item_dict):
+        self._process_bslash(item_dict)
+        ret = self.db.insert_row(self.TABLE_NAME, item_dict)
+        if not ret:
+            return (RT.ERR, 'somthing error failed when insert item to %s' % self.TABLE_NAME)
+        return (RT.SUCC, '')
 
 if __name__ == '__main__':
     #DRIVER TEST

@@ -19,12 +19,12 @@ class PlanController(BaseController):
     def runPlan(self, id):
         plan = self.getPlan(id)
         plan_result = {}
-        plan_result['plan'] = plan['name']
+        plan_result['plan_name'] = plan['name']
         plan_result['status'] = 'new'
         ret = self.planResultTable.insert(plan_result)
         if not ret[0]==RT.SUCC:
-            return False, 'insert plan result in db failed and plan name is [%s]' % cs['name']
-        return True, ''
+            return RT.ERR, 'insert plan result in db failed and plan name is [%s]' % plan['name']
+        return RT.SUCC, ''
 
     def addPlan(self, submit_data):
         ret = self.planTable.insert(submit_data)
@@ -52,8 +52,8 @@ class PlanController(BaseController):
             return 0
         return ret[1]
 
-    def getPlanResults(self, start, limit, cond_dict={}):
-        ret = self.planResultTable.selects(start, limit, cond_dict)
+    def getPlanResults(self, start, limit, cond_dict={}, order_dict={}):
+        ret = self.planResultTable.selects(start, limit, cond_dict, order_dict)
         return ret
 
     def countPlanResult(self, cond_dict={}):

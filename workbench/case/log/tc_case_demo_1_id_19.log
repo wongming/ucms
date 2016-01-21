@@ -1,0 +1,20 @@
+[2016.01.20 17:21:50.163211][tc_case_demo_1]: start to run...
+[2016.01.20 17:21:50.163262][tc_case_demo_1#tc_bye]: start to run...
+[2016.01.20 17:21:50.163305][tc_case_demo_1#tc_bye]: test success.
+[2016.01.20 17:21:50.163338][tc_case_demo_1#tc_bye]: stop running.
+[2016.01.20 17:21:50.163367][tc_case_demo_1#tc_hello]: start to run...
+[2016.01.20 17:21:50.163415][tc_case_demo_1#tc_hello]: test failed:
+Traceback (most recent call last):
+  File "exec.py", line 4, in tc_hello
+    assert False, 'hello'
+AssertionError: hello
+[2016.01.20 17:21:50.163602][tc_case_demo_1#tc_hello]: stop running.
+[2016.01.20 17:21:50.163652][tc_case_demo_1]: stop running.
+
+Test Build          /Users/wangming/workspace/atrs/workbench/case/tc_case_demo_1
+Start Time          2016.01.20 17:21:50.163193
+Stop Time           2016.01.20 17:21:50.163682
+Duration            0.000489 seconds
+Statistics
+    All=2 Passed=1 Failed=1 Aborted=0
+

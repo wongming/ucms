@@ -1,0 +1,191 @@
+<project name="packer" basedir="">
+	<!-- 用户参数设置-->
+	<property name="project.dir" value="/Users/wangming/Documents/project/"/>
+	<property name="project.name" value="smdb"/>
+	<!-- end-->
+	<property name="cleannote.dir" value="${project.dir}/${project.name}_cleannote"/>
+	<property name="obsall.dir" value="${project.dir}/${project.name}_obsall"/>
+	<property name="classes.dir" value="${obsall.dir}/${project.name}/WebRoot/WEB-INF/classes"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+	<!--类路径设置 -->
+	<path id="project.classpath">
+        <pathelement location="${obsall.dir}/${project.name}/WebRoot/WEB-INF/classes"/>
+        <path refid="Java EE 5 Libraries.libraryclasspath"/>
+        <path refid="external.libs"/>
+	</path>
+    <path id="Java EE 5 Libraries.libraryclasspath">
+        <pathelement location="${j2ee.home}/javaee.jar"/>
+        <pathelement location="${j2ee.home}/jsf-impl.jar"/>
+        <pathelement location="${j2ee.home}/jsf-api.jar"/>
+        <pathelement location="${j2ee.home}/jstl-1.2.jar"/>
+    </path>
+	<path id ="external.libs">
+		<fileset dir="${obsall.dir}/${project.name}/WebRoot/WEB-INF/lib">
+		</fileset>
+	</path>
+
+	<target name="clean.all">
+		<delete dir="${cleannote.dir}"/>
+	</target>
+	<!--清除工程源码注释-->
+	<target name="run.cleannote">
+		<delete dir="${cleannote.dir}"/>
+		<mkdir dir="${cleannote.dir}/${project.name}"/>
+		<copy todir="${cleannote.dir}/${project.name}">
+		    <fileset dir="${project.dir}/${project.name}"/>
+		</copy>
+		<taskdef name="commentscleaner" classname="tools.CommentsCleaner" classpath="lib/support-tools.jar"/>
+		<commentscleaner dir="${cleannote.dir}/${project.name}"/>
+		<antcall target="cleannote.insets">
+			<param name="param1" value="${cleannote.dir}/${project.name}"/>
+		</antcall>
+	</target>
+	<!--全工程扰乱并封装成发布包depends="run.cleannote">-->
+	<target name="run.obsall" depends="run.cleannote">
+		<delete dir="${obsall.dir}"/>
+		<mkdir dir="${obsall.dir}/${project.name}"/>
+		<copy todir="${obsall.dir}/${project.name}">
+		    <fileset dir="${cleannote.dir}/${project.name}"/>
+		</copy>
+		<!--<antcall target="compile"/>-->
+		<taskdef resource="proguard/ant/task.properties"
+				         classpath="${basedir}/lib/proguard.jar" />
+		<proguard configuration="${basedir}/proguard_obsall.pro"/>
+		<copy todir="${obsall.dir}/${project.name}/WebRoot/WEB-INF/classes">
+			<fileset dir="${obsall.dir}/tmp"/>
+		</copy>
+		<antcall target="generate.war">
+			<param name="param_input" value="${obsall.dir}/${project.name}"/>
+			<param name="param_output" value="${obsall.dir}/${project.name}.war"/>
+		</antcall>
+		<delete dir="${obsall.dir}/tmp"/>
+		<delete dir="${obsall.dir}/${project.name}"/>
+	</target>
+	<target name="init" >
+		<delete dir="${classes.dir}"/>
+		<mkdir dir="${classes.dir}"/>
+	</target>
+	<!-- 编译整个工程depends="init"-->
+	<target name="compile" depends="init">
+		<echo message="begin to compile!"/>
+
+        <javac encoding="utf-8" debug="true" debuglevel="${debuglevel}" srcdir="${obsall.dir}/${project.name}/src" destdir="${classes.dir}" source="${source}" target="${target}" failonerror="true" nowarn="true" fork="true" memoryInitialSize ="512M" memoryMaximumSize ="1024M">
+        	<!-- 编译时用到的jar包来自于classpath所指定的目录 -->
+        	<classpath refid="project.classpath"/>
+        	<!-- 编译器显示准确的警告信息位置 -->
+        	<compilerarg value="-Xlint"/>
+        </javac>
+
+        <echo message="begin to copy other configs!"/>
+        <copy todir="${classes.dir}">
+        	<fileset dir="${obsall.dir}/${project.name}/src">
+            	<exclude name="**/*.launch"/>
+            	<exclude name="**/*.java"/>
+        	</fileset>
+        </copy>
+	</target>
+	<target name="generate.war"  description="开始工作了（打war包）">
+		   <war destfile="${param_output}" needxmlfile='false' >
+				    <fileset dir="${param_input}/WebRoot">
+					     <exclude name="**/doc/**"/>
+					     <exclude name="**/src/**"/>
+					     <exclude name="**/.svn/**"/>
+					     <exclude name="**/*.mex"/>
+				    </fileset>
+		   </war>
+    </target>
+	<target name="generate.orign.war"  description="开始工作了（打war包）">
+		   <war destfile="${project.dir}/${project.name}.war" needxmlfile='false' >
+				    <fileset dir="${project.dir}/${project.name}/WebRoot">
+					     <exclude name="**/doc/**"/>
+					     <exclude name="**/src/**"/>
+					     <exclude name="**/.svn/**"/>
+					     <exclude name="**/*.mex"/>
+				    </fileset>
+		   </war>
+    </target>
+	<!-- 使用yuicompressor压缩css -->
+	<target name="minify-css">
+		<apply executable="java" verbose="true" dest="${param1}/WebRoot" failonerror="true" parallel="false">
+			<fileset dir="${param1}/WebRoot" includes="**/*.css" />
+			<arg line="-jar" />
+			<arg path="lib/yuicompressor-2.4.7.jar" />
+			<arg line="--charset utf-8" />
+			<arg value="--type" />
+			<arg value="css" />
+			<arg value="-v" />
+			<arg value="-o" />
+			<targetfile />
+			<mapper type="glob" from="*.css" to="*-min.css"/>
+		</apply>
+	</target>
+
+	<!-- 使用yuicompressor压缩js -->
+	<target name="minify-js">
+		<apply executable="java" dest="${param1}/WebRoot">
+			<fileset dir="${param1}/WebRoot" includes="**/*.js"/>
+			<arg line="-jar"/>
+			<arg path="lib/yuicompressor-2.4.7.jar"/>
+			<arg value="-o"/>
+			<targetfile/>
+			<mapper type="glob" from="*.js" to="*-min.js"/>
+		</apply>
+	</target>
+	<target name="delete.css.js" >
+		<delete>
+			<fileset dir="${param1}" >
+				<include name="**/*.css"/>
+				<include name="**/*.js"/>
+				<exclude name="**/*min.css"/>
+				<exclude name="**/*min.js"/>
+			</fileset>
+		</delete>
+	</target>
+	<!-- 清除js和css注释-->
+	<target name="cleannote.insets">
+		<echo message="${param1}"/>
+		<antcall target="minify-css">
+			<param name="param1" value="${param1}"/>
+		</antcall>
+		<antcall target="minify-js">
+			<param name="param1" value="${param1}"/>
+		</antcall>
+		<move todir="${param1}">
+		    <fileset dir="${cleannote.dir}/${project.name}">
+		        <include name="**/*-min.css"/>
+		    </fileset>
+			<mapper type="glob" from="*-min.css" to="*.css"/>
+		</move>
+		<move todir="${param1}">
+		    <fileset dir="${cleannote.dir}/${project.name}">
+		        <include name="**/*-min.js"/>
+		    </fileset>
+			<mapper type="glob" from="*-min.js" to="*.js"/>
+		</move>
+	</target>
+	<target name="test.minify-css">
+			<apply executable="java" verbose="true" dest="E:/tmp" failonerror="true" parallel="false">
+				<fileset dir="E:/tmp" includes="**/*.css" />
+				<arg line="-jar" />
+				<arg path="lib/yuicompressor-2.4.7.jar" />
+				<arg line="--charset utf-8" />
+				<arg value="--type" />
+				<arg value="css" />
+				<arg value="-v" />
+				<arg value="-o" />
+				<targetfile />
+				<mapper type="glob" from="*.css" to="*-min.css"/>
+			</apply>
+	</target>
+	<!-- 全工程加密-->
+	<target name="run.encryption">
+		<taskdef name="commentscleaner" classname="tools.Encryptor" classpath="lib/support-tools.jar"/>
+        <commentscleaner  dir="${obsall.dir}"
+        				projectName="${project.name}.war"
+						output="${project.name}-encryption.war"
+						regEx=".*csdc.*class$"/>
+	</target>
+
+</project>

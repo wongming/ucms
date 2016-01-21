@@ -21,11 +21,13 @@ urls = (
     "/driver/add","AddDriver",
     "/case","ListCase",
     "/case/(\d+)","ViewCase",
+    "/case/(\d+)/run","RunCase",
     "/case/(.+)/result","ListCaseResult",
     "/case/add","AddCase",
     "/plan","ListPlan",
-    "/plan/(.+)","ViewPlan",
-    "/plan/result/(\d+)","ListPlanResult",
+    "/plan/(\d+)","ViewPlan",
+    "/plan/(\d+)/run","RunPlan",
+    "/plan/(.+)/result","ListPlanResult",
     "/plan/add","AddPlan"
 )
 
@@ -127,13 +129,21 @@ class AddCase(object):
             return [RT.ERR, 'insert case succ, select error']
         return [RT.SUCC, case['id']]
 
+class RunCase(object):
+    def POST(self, case_id):
+        ctl = CaseController()
+        ret = ctl.runCase(case_id)
+        if not ret[0]==RT.SUCC:
+            return [RT.ERR, ret[1]]
+        return [RT.SUCC, '']
+
 class ListCaseResult(object):
     def POST(self, case_name):
         ctl = CaseController()
         submit_data = web.input()
         startIndex = int(submit_data['startIndex'])
         bufferSize = int(submit_data['bufferSize'])
-        ret = ctl.getCaseResults(startIndex, startIndex+bufferSize, {'case_name': case_name})
+        ret = ctl.getCaseResults(startIndex, startIndex+bufferSize, {'case_name': case_name},{'id': 'desc'})
         totalDataNo = ctl.countCaseResult({'case_name': case_name})
         result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
         return json.dumps(result)
@@ -158,7 +168,8 @@ class ViewPlan(object):
         ret = ctl.getPlan(id)
         if not ret:
             return render.notFound()
-        return render.plan(ret)
+        isExecuted = False if (ctl.countPlanResult({'plan_name': ret['name']})==0) else True
+        return render.plan(ret, isExecuted)
 
 class AddPlan(object):
     def GET(self):
@@ -175,13 +186,21 @@ class AddPlan(object):
             return [RT.ERR, 'insert plan succ, select error']
         return [RT.SUCC, plan['id']]
 
+class RunPlan(object):
+    def POST(self, plan_id):
+        ctl = PlanController()
+        ret = ctl.runPlan(plan_id)
+        if not ret[0]==RT.SUCC:
+            return [RT.ERR, ret[1]]
+        return [RT.SUCC, '']
+
 class ListPlanResult(object):
-    def POST(self):
-        ctl = CaseController()
+    def POST(self, plan_name):
+        ctl = PlanController()
         submit_data = web.input()
         startIndex = int(submit_data['startIndex'])
         bufferSize = int(submit_data['bufferSize'])
-        ret = ctl.getPlanResults(startIndex, startIndex+bufferSize)
+        ret = ctl.getPlanResults(startIndex, startIndex+bufferSize,{'plan_name': plan_name}, {'id': 'desc'})
         totalDataNo = ctl.countPlanResult()
         result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
         return json.dumps(result)
@@ -194,7 +213,7 @@ def startTestTask():
     tp_task_log = cur_dir+'/../log/planTask.log'
     #print os.system('python %s >>%s 2>&1 &' % (tc_task_script,tc_task_log))
     #print os.system('python %s >>%s 2>&1 &' % (tp_task_script,tp_task_log))
-    os.system('python %s &' % tc_task_script)
+    #os.system('python %s &' % tc_task_script)
     os.system('python %s &' % tp_task_script)
 
 if __name__ == "__main__":

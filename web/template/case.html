@@ -71,6 +71,7 @@ $if isExecuted:
             <table class = "table table-striped table-hover">
                 <thead>
                 <tr>
+                    <td>ID</td>
                     <td>Case Name</td>
                     <td>Status</td>
                     <td>Start Time</td>
@@ -83,6 +84,7 @@ $if isExecuted:
                 <tbody>
                 {for item in pageData}
                 <tr>
+                    <td>$${item.id}</td>
                     <td>$${item.case_name}</td>
                     <td>$${item.status}</td>
                     <td>$${item.start_time}</td>
