@@ -67,6 +67,7 @@ $def with (main)
     <!-- js files -->
     <script src="/static/lib/jquery/jquery.min.js"></script>
     <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+
     $if main.jsFiles:
         $for js in main.jsFiles.split():
             <script src="$js"></script>

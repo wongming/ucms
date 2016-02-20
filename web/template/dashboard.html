@@ -1,6 +1,58 @@
 $var baseTitle: Dashboard of ATRS
 $var navTitle: dashboard
-$var jsFiles: 
-<div>
-    dashboard page!
+$var jsFiles:
+<div class="title_bar">
+    <div class="title_path2">
+        <ol class="breadcrumb">
+            <li class="top_path glyphicon glyphicon-home"></li>
+            <li class="top_path"><a href="/driver">Dashboard</a></li>
+        </ol>
+    </div>
 </div>
+<div class="container-fluid">
+    <div class="static_bar">
+        <ul class="">
+            <li ><div class="name">Total Drivers</div><div class="value">120</div></li>
+            <li ><div class="name">Total Cases</div><div class="value">120</div></li>
+            <li ><div class="name">Total Plans</div><div class="value">120</div></li>
+            <li ><div class="name">Total Applications</div><div class="value">120</div></li>
+        </ul>
+    </div>
+    <div class="static_chart">
+        <ul>
+            <li><div class="chart_pic" id="plan_today"></div><div class="chart_name">Plans Today</div></li>
+            <li><div class="chart_pic" id="instance_total"></div><div class="chart_name">Total Instances</div></li>
+        </ul>
+    </div>
+</div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
+<script>
+    Morris.Donut({
+      element: 'plan_today',
+      data: [
+        {label: "Success", value: 12},
+        {label: "Failed", value: 30},
+        {label: "Running", value: 20}
+      ],
+      colors: [
+        'green',
+        'red',
+        'yellow'
+      ],
+    });
+    Morris.Donut({
+      element: 'instance_total',
+      data: [
+        {label: "Success", value: 12},
+        {label: "Failed", value: 30},
+        {label: "Running", value: 20}
+      ],
+      colors: [
+        'green',
+        'red',
+        'yellow'
+      ],
+    });
+</script>

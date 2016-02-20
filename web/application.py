@@ -48,6 +48,7 @@ class Index:
 
 class Dashboard:
     def GET(self):
+        
         return render.dashboard()
 
 class ListDriver(object):

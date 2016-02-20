@@ -60,7 +60,15 @@ button {
   float: left;
   width: 60%;
 }
+.title_path2 {
+  float: left;
+  width: 100%;
+}
+
 .title_path ol{
+  margin-bottom: 2;
+}
+.title_path2 ol{
   margin-bottom: 2;
 }
 .top_path {
@@ -131,4 +139,43 @@ button {
 /***************** view_bottom ********************/
 .view_group {
   float: left;
+}
+/***************** dashboard ********************/
+.static_bar {
+    text-align: center;
+}
+.static_bar ul li {
+    float: left;
+    background-color: rgba(42, 132, 189, 1);
+    border-style: solid;
+    border-width: 0 1px 0 1px;
+    border-color: white;
+    height: 80px;
+    width: 25%;
+}
+.static_bar .name{
+    font-size: 20px;
+    padding: 10 0 0 5;
+}
+
+.static_bar .value{
+    font-size: 25px;
+    color: white;
+    padding: 5 0 0 5;
+}
+.static_chart {
+
+}
+.static_chart ul li{
+    float: left;
+}
+.chart_pic {
+    height: 200px;
+    width: 200px;
+}
+.chart_name {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    font-size: 20px;
 }
