@@ -15,8 +15,8 @@ class TestPlanTask(threading.Thread):
     def __init__(self, plan_result):
         self.plan_result_id = plan_result['id']
         self.plan_name = plan_result['plan_name']
-        self.plan_path = cur_dir+'/../workbench/'+self.plan_name+'.json'
-        self.log_path = cur_dir+'/../workbench/log/tp_'+self.plan_name+'_id_'+str(self.plan_result_id)+'.log'
+        self.plan_path = os.path.normpath(cur_dir+'/../workbench/'+self.plan_name+'.json')
+        self.log_path = os.path.normpath(cur_dir+'/../workbench/log/tp_'+self.plan_name+'_id_'+str(self.plan_result_id)+'.log')
         self.planTable = PlanTable()
         self.planResultTable = PlanResultTable()
         super(TestPlanTask, self).__init__()

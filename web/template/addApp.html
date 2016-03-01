@@ -1,0 +1,78 @@
+$var baseTitle: Add App
+$var navTitle: app
+$var jsFiles:
+<div class="title_bar">
+    <div class="title_path">
+        <ol class="breadcrumb">
+            <li class="top_path glyphicon glyphicon-home"></li>
+            <li class="top_path"><a href="/app">App</a></li>
+            <li class="sub_path">添加</li>
+        </ol>
+    </div>
+    <div class="title_operate">
+        <a href="/app"><button class="btn">返回</button></a>
+    </div>
+</div>
+<div class="container-fluid">
+	<div class="col-md-12">
+		<form class="form-horizontal" role="form" id="app_add_form" action="/app/add" method="post">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">App Type:</label>
+				<div class="col-sm-3">
+					<select name="type" class="form-control">
+                        <option>JavaWeb</option>
+                        <option>JavaWeb-Maven</option>
+                        <option>Python</option>
+                        <option>Custom</option>
+					</select>
+				</div>
+			 </div>
+			 <div class="form-group">
+				<label class="col-sm-2 control-label">Name:</label>
+				<div class="col-sm-3">
+						<input class="form-control" type="text" id="app_name_add" name="name">
+				</div>
+			</div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Desc:</label>
+                <div class="col-sm-8">
+                    <textarea rows="4" class="form-control" name="description"></textarea>
+                 </div>
+            </div>
+            <div class="form-group">
+               <label class="col-sm-2 control-label">Access Url:</label>
+               <div class="col-sm-3">
+                       <input class="form-control" type="text" id="app_name_add" name="access_url">
+               </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Repository Type:</label>
+                <div class="col-sm-3">
+                    <select name="repository_type" class="form-control">
+                        <option>SVN</option>
+                        <option>Git</option>
+                        <option>File</option>
+                    </select>
+                </div>
+             </div>
+             <div class="form-group">
+				<label class="col-sm-2 control-label">Repository Path:</label>
+				<div class="col-sm-8">
+					<input class="form-control" type="text" name="repository_path">
+				</div>
+			 </div>
+			 <div class="form-group">
+				<label class="col-sm-2 control-label">Excute Script:</label>
+				<div class="col-sm-8">
+                    <textarea rows="8" class="form-control" name="script"></textarea>
+				</div>
+			 </div>
+             <div class="form-group">
+     			<div class="col-sm-offset-5">
+     					<a href="case/list" type="button" class="btn btn-default">Cancel</a>
+     					<button id="submit-case-add-btn" type="submit" class="btn">Submit</button>
+     			</div>
+     		</div>
+		</form>
+	</div>
+</div>

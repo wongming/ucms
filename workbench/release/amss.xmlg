@@ -1,0 +1,21 @@
+<project name="packer" basedir="">
+	<property name="workspace" value="/Users/wangming/Documents/project/"/>
+	<property name="project.name" value="$amss"/>
+	<target name="generate.orignal.war"  description="generate original war with none-handle code">
+		<war destfile="${workspace}/${project.name}.war" needxmlfile='false' >
+			<fileset dir="${workspace}/${project.name}/WebRoot">
+				 <exclude name="**/doc/**"/>
+				 <exclude name="**/src/**"/>
+				 <exclude name="**/.svn/**"/>
+				 <exclude name="**/*.mex"/>
+			</fileset>
+		</war>
+	</target>
+
+	<!-- 全工程加密-->
+	<target name="run.encryption">
+		<taskdef name="commentscleaner" classname="tools.Encryptor" classpath="lib/support-tools.jar"/>
+		<commentscleaner  dir="${workspace}" projectName="${project.name}.war" output="${project.name}-encryption.war" regEx=".*csdc.*class$"/>
+	</target>
+
+</project>

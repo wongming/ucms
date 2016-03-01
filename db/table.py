@@ -98,6 +98,25 @@ class BaseTable(object):
 def gen_field_str(field_dict):
     return field_dict['name'] + ' ' + field_dict['type']  + ' ' + field_dict['attr']
 
+class SystemOptionTable(BaseTable):
+    TABLE_NAME = 'T_SYSTEM_OPTION'
+    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
+    NAME = {'name':'name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    CODE = {'name':'code', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    STANDARD = {'name':'standard', 'type':'CHAR(40)', 'attr':''}
+    DESCRIPTION = {'name':'description', 'type':'CHAR(100)', 'attr':''}
+
+    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
+            + gen_field_str(ID) + ','\
+            + gen_field_str(NAME) + ','\
+            + gen_field_str(CODE) + ','\
+            + gen_field_str(STANDARD) + ','\
+            + gen_field_str(DESCRIPTION) + ','\
+            + 'PRIMARY KEY(id)'\
+            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
+
+    DROPtab_SQL = 'DROP table ' + TABLE_NAME
+
 class AccountTable(BaseTable):
     TABLE_NAME = 'T_ACCOUNT'
     ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
@@ -247,6 +266,34 @@ class PlanResultTable(BaseTable):
         if not ret:
             return (RT.ERR, 'somthing error failed when insert item to %s' % self.TABLE_NAME)
         return (RT.SUCC, '')
+
+class AppTable(BaseTable):
+    TABLE_NAME = 'T_APP'
+    ID= {'name':'id', 'type':'INT(4)', 'attr':'NOT NULL AUTO_INCREMENT'}
+    NAME = {'name':'name', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    DESCRIPTION = {'name':'description', 'type':'TEXT', 'attr':''}
+    STATUS = {'name':'status', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    TYPE = {'name':'type', 'type':'CHAR(40)', 'attr':'NOT NULL'}
+    SCRIPT = {'name':'script', 'type':'TEXT', 'attr':''}
+    ACCESSURL = {'name':'access_url', 'type':'CHAR(100)', 'attr':''}
+    REPOSITORYTYPE = {'name':'repository_type', 'type':'CHAR(40)', 'attr':''}
+    REPOSITORYPATH = {'name':'repository_path', 'type':'CHAR(100)', 'attr':''}
+    LASTRELEASETIME = {'name':'last_release_time', 'type':'DATETIME', 'attr':''}
+    LASTRELEASESTATUS = {'name':'last_release_status', 'type':'CHAR(40)', 'attr':''}
+    LASTRELEASELOG = {'name':'last_release_log', 'type':'CHAR(100)', 'attr':''}
+
+    CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
+            + gen_field_str(ID) + ','\
+            + gen_field_str(NAME) + ','\
+            + gen_field_str(DESCRIPTION) + ','\
+            + gen_field_str(STATUS) + ','\
+            + gen_field_str(TYPE) + ','\
+            + gen_field_str(ACCESSURL) + ','\
+            + gen_field_str(SCRIPT) + ','\
+            + 'PRIMARY KEY(id)'\
+            + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
+
+    DROPtab_SQL = 'DROP table ' + TABLE_NAME
 
 if __name__ == '__main__':
     #DRIVER TEST

@@ -1,722 +1,90 @@
-[2016-01-20 21:23:25,914][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:23:25,914][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:23:25,916][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:23:25,916][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:23:25,916][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:23:25,916][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:23:25,917][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:23:25,917][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:23:25,935][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:23:25,935][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:23:25,996][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:23:25,997][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:24:01,023][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:24:01,024][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:24:01,027][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:24:01,028][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:24:01,028][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:24:01,028][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:24:01,029][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:24:01,029][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:24:01,052][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:24:01,052][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:24:01,090][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:24:01,090][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:24:32,182][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:24:32,182][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:24:32,194][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:24:32,194][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:24:32,195][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:24:32,196][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:24:32,200][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:24:32,200][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:24:32,208][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:24:32,209][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:24:32,266][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:24:32,267][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:24:34,623][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:24:34,623][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:24:34,644][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:24:34,644][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:24:34,652][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:24:34,653][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:25:49,400][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:25:49,401][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:25:49,402][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:25:49,403][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:25:49,403][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:25:49,403][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:25:49,404][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:25:49,404][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:25:49,417][1785][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:25:49,417][1785][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:25:49,467][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:25:49,468][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:25:52,004][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:25:52,004][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:25:52,015][1785][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:25:52,016][1785][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:25:52,020][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:25:52,021][1785][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:26:47,695][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:26:47,696][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:26:47,700][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:26:47,700][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:26:47,701][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:26:47,701][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:26:47,703][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:26:47,703][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:26:47,714][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:26:47,714][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:26:47,788][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:26:47,789][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:26:49,616][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:26:49,617][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:26:49,633][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:26:49,634][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:26:49,634][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:26:49,634][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:26:49,654][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:26:49,654][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:26:49,660][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:26:49,661][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:26:49,663][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:26:49,664][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:29,984][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:29,984][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:29,987][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:29,987][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:29,988][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-20 21:37:29,988][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-20 21:37:29,990][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:29,990][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:29,995][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-20 21:37:29,996][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-20 21:37:29,997][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:29,997][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:31,808][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:31,809][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:31,811][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:31,811][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:31,812][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:31,812][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:31,813][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:31,813][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:31,824][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:37:31,824][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:37:31,868][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:31,870][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:32,050][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:32,050][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:32,056][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:32,056][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:32,056][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:37:32,057][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:37:32,058][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:37:32,059][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:37:32,071][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:37:32,071][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:37:32,072][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:32,073][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:34,865][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:34,865][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:34,873][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:34,873][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:34,874][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:34,875][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:34,877][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:34,877][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:34,902][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_PLAN_RESULT(status,plan_name) values ("new","plan_demo");
-[2016-01-20 21:37:34,927][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:34,928][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:34,964][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:34,965][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:34,981][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:34,981][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:34,982][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:34,982][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:34,985][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:34,986][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:34,991][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:37:34,992][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:37:35,065][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:35,071][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:35,205][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:35,205][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:35,209][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:35,209][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:35,209][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:37:35,209][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:37:35,210][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:37:35,210][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:37:35,221][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:37:35,222][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:37:35,223][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:35,224][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:38,004][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:38,005][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:38,008][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:38,008][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:38,008][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:38,008][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:37:38,010][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:38,010][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:37:38,020][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:37:38,020][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:37:38,068][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:38,068][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:38,164][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:38,164][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:38,168][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:37:38,168][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:37:38,169][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:37:38,170][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:37:38,172][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:37:38,172][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:37:38,184][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:37:38,184][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:37:38,186][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:37:38,187][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:47:41,296][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:47:41,296][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:47:41,300][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:47:41,301][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:47:41,301][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-20 21:47:41,301][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-20 21:47:41,305][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:47:41,305][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:47:41,323][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-20 21:47:41,323][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-20 21:47:41,325][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:47:41,326][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:47:42,789][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:47:42,789][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:47:42,791][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:47:42,791][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:47:42,792][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:47:42,792][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 21:47:42,792][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 21:47:42,792][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 21:47:42,802][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:47:42,802][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 21:47:42,856][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:47:42,857][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:47:42,986][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:47:42,986][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:47:42,989][1812][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 21:47:42,989][1812][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 21:47:42,990][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:47:42,990][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 21:47:42,992][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:47:42,993][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 21:47:43,003][1812][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:47:43,003][1812][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 21:47:43,004][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 21:47:43,004][1812][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 22:02:10,444][1910][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 22:02:10,444][1910][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 22:02:10,453][1910][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 22:02:10,453][1910][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 22:02:10,454][1910][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-20 22:02:10,454][1910][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-20 22:02:10,456][1910][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-20 22:02:10,456][1910][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-20 22:02:10,464][1910][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 22:02:10,464][1910][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-20 22:02:10,525][1910][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 22:02:10,525][1910][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 22:02:10,650][1910][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 22:02:10,651][1910][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 22:02:10,658][1910][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-20 22:02:10,659][1910][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-20 22:02:10,659][1910][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 22:02:10,659][1910][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-20 22:02:10,661][1910][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 22:02:10,661][1910][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-20 22:02:10,667][1910][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 22:02:10,668][1910][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-20 22:02:10,669][1910][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-20 22:02:10,671][1910][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:10:00,111][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:10:00,112][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:10:00,117][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:10:00,117][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:10:00,117][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:10:00,117][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:10:00,119][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:10:00,119][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:10:00,158][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 09:10:00,158][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 09:10:00,163][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:10:00,164][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:10:02,074][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:10:02,075][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:10:02,077][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:10:02,077][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:10:02,077][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:10:02,077][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:10:02,078][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:10:02,079][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:10:02,081][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:10:02,081][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:10:02,113][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:10:02,113][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:10:02,226][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:10:02,226][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:10:02,228][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:10:02,228][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:10:02,228][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:10:02,228][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:10:02,230][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:10:02,230][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:10:02,241][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:10:02,241][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:10:02,243][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:10:02,244][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:02,583][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:02,591][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:02,593][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:02,593][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:02,594][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:29:02,594][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:29:02,595][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:02,595][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:02,621][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 09:29:02,621][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 09:29:02,622][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:02,623][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:03,866][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:03,866][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:03,869][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:03,869][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:03,869][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:03,869][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:03,870][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:03,870][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:03,879][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:03,879][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:03,911][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:03,911][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:03,991][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:03,991][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:03,992][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:03,992][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:03,993][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:03,993][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:03,994][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:03,994][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:03,996][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:03,996][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:03,997][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:03,997][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:12,189][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:12,190][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:12,192][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:12,192][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:12,192][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:12,192][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:12,193][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:12,194][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:12,205][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_PLAN_RESULT(status,plan_name) values ("new","plan_demo");
-[2016-01-21 09:29:12,211][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:12,213][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:12,231][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:12,232][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:12,234][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:12,234][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:12,235][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:12,235][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:12,236][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:12,236][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:12,243][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:12,243][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:12,280][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:12,280][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:12,365][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:12,365][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:12,367][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:12,367][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:12,367][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:12,367][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:12,368][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:12,369][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:12,373][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:12,373][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:12,374][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:12,374][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:18,467][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:18,467][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:18,469][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:18,469][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:18,469][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:18,469][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:18,479][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:18,479][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:18,481][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:18,481][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:18,512][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:18,512][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:18,600][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:18,600][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:18,602][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:18,602][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:18,602][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:18,602][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:18,603][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:18,603][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:18,606][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:18,606][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:18,607][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:18,607][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:26,306][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:26,306][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:26,308][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:26,309][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:26,309][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:29:26,310][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:29:26,312][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 09:29:26,312][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 09:29:26,315][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 09:29:26,316][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 09:29:26,316][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:26,316][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:27,323][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:27,323][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:27,324][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 09:29:27,324][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 09:29:27,325][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
-[2016-01-21 09:29:27,325][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
-[2016-01-21 09:29:27,338][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
-[2016-01-21 09:29:27,339][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
-[2016-01-21 09:29:27,340][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:28,180][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:28,180][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:28,180][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER where id = "80";
-[2016-01-21 09:29:28,180][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER where id = "80";
-[2016-01-21 09:29:28,181][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
-[2016-01-21 09:29:28,181][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
-[2016-01-21 09:29:28,228][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:30,174][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:30,175][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:30,177][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:30,177][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:30,178][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:29:30,178][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:29:30,179][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 09:29:30,179][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 09:29:30,186][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 09:29:30,187][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 09:29:30,188][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:30,188][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:31,795][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:31,795][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:31,797][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:31,797][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:31,797][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE where id = "15";
-[2016-01-21 09:29:31,797][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE where id = "15";
-[2016-01-21 09:29:31,798][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 09:29:31,798][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 09:29:31,808][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
-[2016-01-21 09:29:31,808][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
-[2016-01-21 09:29:31,842][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:31,842][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:31,970][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:31,970][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:31,972][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:31,972][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:31,972][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE_RESULT  where  case_name = "case_demo_1"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:31,972][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE_RESULT  where  case_name = "case_demo_1"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:31,974][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE_RESULT ;
-[2016-01-21 09:29:31,974][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE_RESULT ;
-[2016-01-21 09:29:31,977][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
-[2016-01-21 09:29:31,978][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
-[2016-01-21 09:29:31,979][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:31,979][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:48,704][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:48,704][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:48,706][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:48,706][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:48,706][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:29:48,706][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:29:48,707][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 09:29:48,707][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 09:29:48,709][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 09:29:48,709][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 09:29:48,710][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:48,711][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:49,868][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:49,868][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:49,871][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:49,871][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:49,872][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:29:49,872][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:29:49,874][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:49,874][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:49,877][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 09:29:49,878][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 09:29:49,879][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:49,879][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:51,046][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:51,046][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:51,048][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:51,048][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:51,048][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:51,048][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 09:29:51,050][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:51,050][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:29:51,060][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:51,060][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 09:29:51,092][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:51,092][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:51,178][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:51,178][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:51,180][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:29:51,180][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:29:51,180][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:51,180][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 09:29:51,181][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:51,181][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 09:29:51,186][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:51,187][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 09:29:51,188][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:29:51,188][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:30:11,157][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:30:11,157][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:30:11,161][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:30:11,161][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:30:11,161][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:30:11,161][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 09:30:11,162][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 09:30:11,162][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 09:30:11,165][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 09:30:11,165][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 09:30:11,168][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:30:11,169][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:30:11,941][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:30:11,942][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:30:11,945][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:30:11,945][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:30:11,946][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:30:11,946][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 09:30:11,947][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 09:30:11,947][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 09:30:11,957][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 09:30:11,957][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 09:30:11,958][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:30:11,959][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:30:12,781][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:30:12,781][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:30:12,781][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 09:30:12,781][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 09:30:12,782][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
-[2016-01-21 09:30:12,783][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
-[2016-01-21 09:30:12,793][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
-[2016-01-21 09:30:12,794][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
-[2016-01-21 09:30:12,795][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 09:30:14,810][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 09:30:14,811][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 09:30:14,812][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 09:30:14,813][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 09:30:14,818][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
-[2016-01-21 09:30:14,818][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
-[2016-01-21 09:30:14,831][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
-[2016-01-21 09:30:14,831][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
-[2016-01-21 09:30:14,832][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:08,432][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:08,433][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:08,433][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 10:09:08,433][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 10:09:08,464][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
-[2016-01-21 10:09:08,464][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
-[2016-01-21 10:09:08,508][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
-[2016-01-21 10:09:08,508][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
-[2016-01-21 10:09:08,514][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:09,570][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:09,570][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:09,574][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:09,574][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:09,575][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 10:09:09,575][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 10:09:09,576][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 10:09:09,576][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 10:09:09,579][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 10:09:09,580][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 10:09:09,581][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:09,582][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:10,472][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:10,472][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:10,473][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:10,474][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:10,474][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 10:09:10,474][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 10:09:10,475][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 10:09:10,475][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 10:09:10,477][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 10:09:10,477][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 10:09:10,478][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:10,478][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:12,075][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:12,075][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:12,077][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:12,077][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:12,077][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 10:09:12,077][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 10:09:12,097][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 10:09:12,098][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 10:09:12,099][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 10:09:12,100][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 10:09:12,132][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:12,132][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:12,229][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:12,230][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:12,231][2481][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 10:09:12,231][2481][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 10:09:12,232][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 10:09:12,232][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 10:09:12,240][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 10:09:12,240][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 10:09:12,260][2481][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 10:09:12,260][2481][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 10:09:12,261][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 10:09:12,262][2481][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:07:57,635][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:07:57,635][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:07:57,649][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:07:57,649][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:07:57,650][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN where id = "5";
-[2016-01-21 20:07:57,650][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN where id = "5";
-[2016-01-21 20:07:57,683][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 20:07:57,683][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 20:07:57,718][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 20:07:57,719][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT  where  plan_name = "plan_demo" 
-[2016-01-21 20:07:57,783][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:07:57,783][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:07:58,044][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:07:58,045][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:07:58,047][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:07:58,047][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:07:58,048][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 20:07:58,048][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN_RESULT  where  plan_name = "plan_demo"   order by  id desc  limit 0,10;
-[2016-01-21 20:07:58,052][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 20:07:58,052][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN_RESULT ;
-[2016-01-21 20:07:58,078][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 20:07:58,079][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN_RESULT 
-[2016-01-21 20:07:58,080][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:07:58,080][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:14,891][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:14,891][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:14,894][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:14,895][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:14,896][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:08:14,896][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:08:14,898][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 20:08:14,898][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 20:08:14,913][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 20:08:14,913][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 20:08:14,914][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:14,915][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:15,888][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:15,888][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:15,890][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:15,890][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:15,891][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:08:15,891][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:08:15,892][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 20:08:15,892][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 20:08:15,907][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 20:08:15,907][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 20:08:15,908][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:15,910][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:16,621][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:16,621][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:16,623][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:16,623][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:16,623][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:08:16,623][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:08:16,624][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 20:08:16,624][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 20:08:16,626][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 20:08:16,626][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 20:08:16,627][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:16,628][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:17,304][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:17,304][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:17,304][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 20:08:17,304][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
-[2016-01-21 20:08:17,307][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
-[2016-01-21 20:08:17,308][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
-[2016-01-21 20:08:17,310][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
-[2016-01-21 20:08:17,310][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
-[2016-01-21 20:08:17,311][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:17,831][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:17,831][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:17,833][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:17,833][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:17,833][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:08:17,833][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:08:17,834][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 20:08:17,834][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 20:08:17,844][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 20:08:17,844][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 20:08:17,845][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:17,845][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:18,413][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:18,413][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:18,415][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:18,415][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:18,415][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:08:18,415][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:08:18,416][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 20:08:18,416][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 20:08:18,427][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 20:08:18,427][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 20:08:18,428][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:18,428][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:19,246][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:19,246][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:19,248][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:08:19,248][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:08:19,248][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:08:19,248][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:08:19,249][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 20:08:19,249][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 20:08:19,261][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 20:08:19,261][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 20:08:19,262][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:08:19,263][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:09:22,616][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:09:22,617][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:09:22,625][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:09:22,626][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:09:22,627][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:09:22,627][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:09:22,645][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 20:09:22,645][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 20:09:22,647][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 20:09:22,647][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 20:09:22,648][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:09:22,648][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:28:46,628][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:28:46,629][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:28:46,632][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:28:46,632][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:28:46,632][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:28:46,632][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
-[2016-01-21 20:28:46,673][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
-[2016-01-21 20:28:46,673][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
-[2016-01-21 20:28:46,710][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
-[2016-01-21 20:28:46,711][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
-[2016-01-21 20:28:46,715][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:28:46,716][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:28:47,771][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:28:47,772][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:28:47,774][10915][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
-[2016-01-21 20:28:47,774][10915][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
-[2016-01-21 20:28:47,775][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:28:47,775][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
-[2016-01-21 20:28:47,776][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
-[2016-01-21 20:28:47,776][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
-[2016-01-21 20:28:47,780][10915][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
-[2016-01-21 20:28:47,780][10915][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
-[2016-01-21 20:28:47,782][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
-[2016-01-21 20:28:47,783][10915][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:09:58,472][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:09:58,472][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:09:58,472][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-02-29 20:09:58,472][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-02-29 20:09:58,474][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-02-29 20:09:58,474][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-02-29 20:09:58,523][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:10:00,133][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:10:00,133][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:10:00,133][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "4";
+[2016-02-29 20:10:00,133][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "4";
+[2016-02-29 20:10:00,134][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-02-29 20:10:00,135][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-02-29 20:10:00,164][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:43,642][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:43,643][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:43,644][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
+[2016-02-29 20:19:43,644][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
+[2016-02-29 20:19:43,704][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
+[2016-02-29 20:19:43,704][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
+[2016-02-29 20:19:43,740][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
+[2016-02-29 20:19:43,740][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
+[2016-02-29 20:19:43,745][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:44,578][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:44,578][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:44,585][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:44,585][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:44,586][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
+[2016-02-29 20:19:44,586][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
+[2016-02-29 20:19:44,587][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
+[2016-02-29 20:19:44,588][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
+[2016-02-29 20:19:44,611][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
+[2016-02-29 20:19:44,612][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
+[2016-02-29 20:19:44,614][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:44,614][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:46,031][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:46,031][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:46,034][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:46,034][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:46,034][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
+[2016-02-29 20:19:46,035][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
+[2016-02-29 20:19:46,036][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
+[2016-02-29 20:19:46,036][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
+[2016-02-29 20:19:46,043][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
+[2016-02-29 20:19:46,043][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
+[2016-02-29 20:19:46,044][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:46,045][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:46,767][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:46,767][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:46,775][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:46,775][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:46,776][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE     limit 0,10;
+[2016-02-29 20:19:46,776][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE     limit 0,10;
+[2016-02-29 20:19:46,777][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
+[2016-02-29 20:19:46,777][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
+[2016-02-29 20:19:46,784][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE 
+[2016-02-29 20:19:46,784][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE 
+[2016-02-29 20:19:46,785][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:46,786][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:47,602][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:47,602][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:47,605][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:47,605][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:47,605][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE where id = "15";
+[2016-02-29 20:19:47,605][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE where id = "15";
+[2016-02-29 20:19:47,624][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE ;
+[2016-02-29 20:19:47,624][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE ;
+[2016-02-29 20:19:47,626][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
+[2016-02-29 20:19:47,627][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
+[2016-02-29 20:19:47,668][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:47,669][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:47,836][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:47,836][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:47,838][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:47,838][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:47,838][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_CASE_RESULT  where  case_name = "case_demo_1"   order by  id desc  limit 0,10;
+[2016-02-29 20:19:47,839][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_CASE_RESULT  where  case_name = "case_demo_1"   order by  id desc  limit 0,10;
+[2016-02-29 20:19:47,842][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_CASE_RESULT ;
+[2016-02-29 20:19:47,842][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_CASE_RESULT ;
+[2016-02-29 20:19:47,863][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
+[2016-02-29 20:19:47,863][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_CASE_RESULT  where  case_name = "case_demo_1" 
+[2016-02-29 20:19:47,864][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:47,864][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-02-29 20:19:52,365][27044][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-02-29 20:19:52,365][27044][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-02-29 20:19:52,365][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-02-29 20:19:52,365][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-02-29 20:19:52,367][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-02-29 20:19:52,367][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-02-29 20:19:52,403][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.

@@ -1,0 +1,44 @@
+$def with (apps)
+$var baseTitle: App List
+$var navTitle: app
+$var jsFiles:
+<div class="title_header">
+    <div class="title_path">
+        <ol class="breadcrumb">
+          <li class="top_path glyphicon glyphicon-home"></li>
+          <li class="top_path"><a href="/app">App</a></li>
+          <li class="sub_path">列表</li>
+        </ol>
+    </div>
+    <div class="list_search">
+        <span class="list_search_icon glyphicon glyphicon-search"></span>
+        <input class="input-medium search-query list_search_input" type="text" id="list_search_input" placeholder="Type keyword here…">
+    </div>
+</div>
+<div>
+    <table class = "table table-striped table-hover">
+        <thead>
+            <tr>
+                <td>App Name</td>
+                <td>App Type</td>
+                <td>Status</td>
+                <td>Access Url</td>
+                <td>Repository Path</td>
+            </tr>
+        </thead>
+        <tbody>
+        $for app in apps:
+            <tr>
+                <td><a href="app/$app['id']">$app['name']</a></td>
+                <td>$app['type']</td>
+                <td>$app['status']</td>
+                <td>$app['access_url']</td>
+                <td>$app['repository_path']</td>
+            </tr>
+        </tbody>
+    </table>
+    $if len(apps)==0:
+        <div class="none_data">
+            Sorry, None app in system.
+        </div>
+</div>

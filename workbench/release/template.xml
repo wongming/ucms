@@ -1,7 +1,7 @@
 <project name="packer" basedir="">
 	<!-- 用户参数设置-->
 	<property name="project.dir" value="/Users/wangming/Documents/project/"/>
-	<property name="project.name" value="smdb"/>
+	<property name="project.name" value="amss"/>
 	<!-- end-->
 	<property name="cleannote.dir" value="${project.dir}/${project.name}_cleannote"/>
 	<property name="obsall.dir" value="${project.dir}/${project.name}_obsall"/>
@@ -30,7 +30,7 @@
 	</target>
 
 	<!-- 去除代码注释 -->
-	<!-- java: commentscleaner -->
+	<!-- java: commentscleaner-->
 	<!-- js css: yuicompressor-->
 	<target name="run.cleannote">
 		<delete dir="${cleannote.dir}"/>
@@ -38,8 +38,9 @@
 		<copy todir="${cleannote.dir}/${project.name}">
 			<fileset dir="${project.dir}/${project.name}"/>
 		</copy>
+		<!--
 		<taskdef name="commentscleaner" classname="tools.CommentsCleaner" classpath="lib/support-tools.jar"/>
-		<commentscleaner dir="${cleannote.dir}/${project.name}"/>
+		<commentscleaner dir="${cleannote.dir}/${project.name}"/>-->
 		<antcall target="cleannote.insets">
 			<param name="param1" value="${cleannote.dir}/${project.name}"/>
 		</antcall>
@@ -88,6 +89,7 @@
 			</fileset>
 		</copy>
 	</target>
+
 	<target name="generate.war"  description="generate war">
 		   <war destfile="${param_output}" needxmlfile='false' >
 				    <fileset dir="${param_input}/WebRoot">
@@ -167,13 +169,11 @@
 			<mapper type="glob" from="*-min.js" to="*.js"/>
 		</move>
 	</target>
+
 	<!-- 全工程加密-->
 	<target name="run.encryption">
 		<taskdef name="commentscleaner" classname="tools.Encryptor" classpath="lib/support-tools.jar"/>
-        <commentscleaner  dir="${obsall.dir}"
-        				projectName="${project.name}.war"
-						output="${project.name}-encryption.war"
-						regEx=".*csdc.*class$"/>
+        <commentscleaner  dir="${obsall.dir}" projectName="${project.name}.war" output="${project.name}-encryption.war" regEx=".*.*class$"/>
 	</target>
 
 </project>

@@ -1,0 +1,60 @@
+$def with (app)
+$var baseTitle: App Info
+$var navTitle: app
+$var jsFiles: /static/js/app.js
+<div class="title_bar">
+    <div class="title_path">
+        <ol class="breadcrumb">
+            <li class="top_path glyphicon glyphicon-home"></li>
+            <li class="top_path"><a href="/driver">App</a></li>
+            <li class="sub_path">$app['name']</li>
+        </ol>
+    </div>
+    <div class="title_operate">
+        <a href="/app/del/$app['id']"><button id ="view_del" class="btn">删除</button></a>
+        <a href="/app/mod/$app['id']"><button id ="view_mod" class="btn">修改</button></a>
+        <a href="/app/add"><button id ="view_add" class="btn">添加</button></a>
+        <button id ="view_release" class="btn">发布</button>
+    </div>
+</div>
+<div class="view_container">
+    <div class="col-md-12">
+        <label class="col-sm-2">Name:</label>
+        <label class="col-sm-10 control-label">$app['name']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Type:</label>
+        <label class="col-sm-10 control-label">$app['type']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Status:</label>
+        <label class="col-sm-10 control-label">$app['status']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Access Url:</label>
+        <label class="col-sm-10 control-label">$app['access_url']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Repository:</label>
+        <label class="col-sm-1 control-label">$app['repository_type']</label>
+        <label class="col-sm-9 control-label">$app['repository_path']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Last Release Status:</label>
+        <label class="col-sm-10 control-label">$app['last_release_status']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Last Release Time:</label>
+        <label class="col-sm-10 control-label">$app['last_release_time']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Last Release Log:</label>
+        <label class="col-sm-10 control-label">$app['last_release_log']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Description:</label>
+        <div class="col-sm-6">
+            <pre>$app['description']</pre>
+        </div>
+    </div>
+</div>

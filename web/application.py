@@ -8,6 +8,7 @@ sys.path.append(cur_dir+'/../control/')
 from DriverControl import DriverController
 from CaseControl import CaseController
 from PlanControl import PlanController
+from AppControl import AppController
 from BaseControl import BaseController
 from BaseControl import RT
 
@@ -28,7 +29,10 @@ urls = (
     "/plan/(\d+)","ViewPlan",
     "/plan/(\d+)/run","RunPlan",
     "/plan/(.+)/result","ListPlanResult",
-    "/plan/add","AddPlan"
+    "/plan/add","AddPlan",
+    "/app","ListApp",
+    "/app/(\d+)","ViewApp",
+    "/app/add","AddApp"
 )
 
 app = web.application(urls, globals(), autoreload = True)
@@ -48,7 +52,7 @@ class Index:
 
 class Dashboard:
     def GET(self):
-        
+
         return render.dashboard()
 
 class ListDriver(object):
@@ -205,6 +209,48 @@ class ListPlanResult(object):
         totalDataNo = ctl.countPlanResult()
         result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
         return json.dumps(result)
+
+class ListApp(object):
+    def POST(self):
+        ctl = AppController()
+        submit_data = web.input()
+        startIndex = int(submit_data['startIndex'])
+        bufferSize = int(submit_data['bufferSize'])
+        ret = ctl.getApps(startIndex, startIndex+bufferSize)
+        totalDataNo = ctl.count()
+        result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
+        return json.dumps(result)
+
+    def GET(self):
+        ctl = AppController()
+        apps = ctl.getAllApps()
+        return render.listApp(apps)
+
+class ViewApp(object):
+    def GET(self, id):
+        ctl = AppController()
+        ret = ctl.getApp(id)
+        if not ret:
+            return render.notFound()
+        return render.app(ret)
+
+class AddApp(object):
+    def GET(self):
+        return render.addApp()
+
+    def POST(self):
+        submit_data = web.input()
+        ctl = AppController()
+        ret = ctl.addApp(submit_data)
+        if not ret[0] == RT.SUCC:
+            return [RT.ERR, ret[1]]
+        plan = ctl.getAppByName(submit_data['name'])
+        if not plan:
+            return [RT.ERR, 'insert plan succ, select error']
+        #return [RT.SUCC, plan['id']]
+        return render.app(plan)
+
+
 
 #enable task Thread
 def startTestTask():
