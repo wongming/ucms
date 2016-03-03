@@ -281,6 +281,7 @@ class AppTable(BaseTable):
     LASTRELEASETIME = {'name':'last_release_time', 'type':'DATETIME', 'attr':''}
     LASTRELEASESTATUS = {'name':'last_release_status', 'type':'CHAR(40)', 'attr':''}
     LASTRELEASELOG = {'name':'last_release_log', 'type':'CHAR(100)', 'attr':''}
+    LASTRELEASEINFO = {'name':'last_release_info', 'type':'CHAR(100)', 'attr':''}
 
     CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
             + gen_field_str(ID) + ','\
@@ -290,6 +291,12 @@ class AppTable(BaseTable):
             + gen_field_str(TYPE) + ','\
             + gen_field_str(ACCESSURL) + ','\
             + gen_field_str(SCRIPT) + ','\
+            + gen_field_str(REPOSITORYPATH) + ','\
+            + gen_field_str(REPOSITORYTYPE) + ','\
+            + gen_field_str(LASTRELEASETIME) + ','\
+            + gen_field_str(LASTRELEASESTATUS) + ','\
+            + gen_field_str(LASTRELEASELOG) + ','\
+            + gen_field_str(LASTRELEASEINFO) + ','\
             + 'PRIMARY KEY(id)'\
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 

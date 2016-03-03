@@ -32,7 +32,8 @@ urls = (
     "/plan/add","AddPlan",
     "/app","ListApp",
     "/app/(\d+)","ViewApp",
-    "/app/add","AddApp"
+    "/app/add","AddApp",
+    "/app/(\d+)/release","ReleaseApp"
 )
 
 app = web.application(urls, globals(), autoreload = True)
@@ -250,7 +251,13 @@ class AddApp(object):
         #return [RT.SUCC, plan['id']]
         return render.app(plan)
 
-
+class ReleaseApp(object):
+    def POST(self, id):
+        ctl = AppController()
+        ret = ctl.releaseApp(id)
+        if not ret[0]==RT.SUCC:
+            return [RT.ERR, ret[1]]
+        return [RT.SUCC, ret[1]]
 
 #enable task Thread
 def startTestTask():

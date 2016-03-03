@@ -1,7 +1,7 @@
 $def with (app)
 $var baseTitle: App Info
 $var navTitle: app
-$var jsFiles: /static/js/app.js
+$var jsFiles: /static/js/viewApp.js
 <div class="title_bar">
     <div class="title_path">
         <ol class="breadcrumb">
@@ -18,21 +18,22 @@ $var jsFiles: /static/js/app.js
     </div>
 </div>
 <div class="view_container">
-    <div class="col-md-12">
-        <label class="col-sm-2">Name:</label>
-        <label class="col-sm-10 control-label">$app['name']</label>
+    <input id="app_id" type="hidden" name="app_id" value="$app['id']">
+    <div class="col-md-12 panel_row">
+        <label class="col-sm-2 panel_name">Name</label>
+        <label class="col-sm-10 control-label panel_value">$app['name']</label>
+    </div>
+    <div class="col-md-12 panel_row">
+        <label class="col-sm-2 panel_name">Type</label>
+        <label class="col-sm-10 control-label panel_value">$app['type']</label>
     </div>
     <div class="col-md-12">
-        <label class="col-sm-2">Type:</label>
-        <label class="col-sm-10 control-label">$app['type']</label>
-    </div>
-    <div class="col-md-12">
-        <label class="col-sm-2">Status:</label>
+        <label class="col-sm-2">Status</label>
         <label class="col-sm-10 control-label">$app['status']</label>
     </div>
     <div class="col-md-12">
         <label class="col-sm-2">Access Url:</label>
-        <label class="col-sm-10 control-label">$app['access_url']</label>
+        <label class="col-sm-10 control-label"><a href="$app['access_url']">$app['access_url']</a></label>
     </div>
     <div class="col-md-12">
         <label class="col-sm-2">Repository:</label>
@@ -46,6 +47,10 @@ $var jsFiles: /static/js/app.js
     <div class="col-md-12">
         <label class="col-sm-2">Last Release Time:</label>
         <label class="col-sm-10 control-label">$app['last_release_time']</label>
+    </div>
+    <div class="col-md-12">
+        <label class="col-sm-2">Last Release Info:</label>
+        <label class="col-sm-10 control-label">$app['last_release_info']</label>
     </div>
     <div class="col-md-12">
         <label class="col-sm-2">Last Release Log:</label>

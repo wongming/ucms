@@ -19,4 +19,11 @@ $(document).ready(function(){
         }
         return false;
     });
+    //$('.view_log_path').('onmouseover',function() {
+        //alert(log_path);
+        //window.clipboardData.setData("Text", copyText);
+    //});
+    function copyLog(){
+        alert('1');
+    }
 });

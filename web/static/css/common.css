@@ -175,6 +175,28 @@ tbody td{
 .view_group {
   float: left;
 }
+/***************** view ********************/
+.view_container {
+    padding-top: 50px;
+}
+.view_container label {
+    border-style: solid;
+    border-width: 1 0 0 0;
+    border-color: rgba(178, 198, 218, 0.43);
+    text-indent: 0;
+    text-align: left;
+    font-size: 15px;
+    color: rgb(5, 29, 48);
+    min-height: 35px;
+    margin: 0;
+    padding-top: 5px;
+}
+.panel_name {
+
+}
+.panel_value {
+
+}
 /***************** dashboard ********************/
 .static_bar {
     text-align: center;
@@ -213,4 +235,12 @@ tbody td{
     width: 200px;
     text-align: center;
     font-size: 20px;
+}
+
+.view_log_path {
+    cursor: pointer;
+    background-image: url(/static/image/copy.png);
+    background-size: 25px 25px;
+    background-repeat:no-repeat;
+    background-position: center;
 }

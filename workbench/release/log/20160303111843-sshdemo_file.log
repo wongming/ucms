@@ -1,0 +1,24 @@
+Buildfile: /Users/wangming/workspace/atrs/workbench/release/sshdemo_file.xml
+
+init:
+   [delete] Deleting directory /Users/wangming/workspace/atrs/workbench/release/project/sshdemo_file/WebRoot/WEB-INF/classes
+    [mkdir] Created dir: /Users/wangming/workspace/atrs/workbench/release/project/sshdemo_file/WebRoot/WEB-INF/classes
+
+compile:
+     [echo] begin to compile!
+    [javac] /Users/wangming/workspace/atrs/workbench/release/sshdemo_file.xml:34: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 9 source files to /Users/wangming/workspace/atrs/workbench/release/project/sshdemo_file/WebRoot/WEB-INF/classes
+    [javac] /Users/wangming/workspace/atrs/workbench/release/project/sshdemo_file/src/com/myHibernate/dao/impl/UserDAOImpl.java:42: 警告: [unchecked] 未经检查的转换
+    [javac] 								.list();
+    [javac] 								     ^
+    [javac]   需要: List<User>
+    [javac]   找到:    List
+    [javac] 1 个警告
+     [echo] begin to copy other configs!
+     [copy] Copying 3 files to /Users/wangming/workspace/atrs/workbench/release/project/sshdemo_file/WebRoot/WEB-INF/classes
+
+generate.orignal.war:
+      [war] Building war: /Users/wangming/workspace/atrs/workbench/release/project/sshdemo_file.war
+
+BUILD SUCCESSFUL
+Total time: 2 seconds

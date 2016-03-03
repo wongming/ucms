@@ -23,7 +23,8 @@ $var jsFiles:
                 <td>App Type</td>
                 <td>Status</td>
                 <td>Access Url</td>
-                <td>Repository Path</td>
+                <td>Last Release Status</td>
+                <td>Last Release Time</td>
             </tr>
         </thead>
         <tbody>
@@ -32,8 +33,9 @@ $var jsFiles:
                 <td><a href="app/$app['id']">$app['name']</a></td>
                 <td>$app['type']</td>
                 <td>$app['status']</td>
-                <td>$app['access_url']</td>
-                <td>$app['repository_path']</td>
+                <td><a href="$app['access_url']">$app['access_url']</a></td>
+                <td>$app['last_release_status']</td>
+                <td>$app['last_release_time']</td>
             </tr>
         </tbody>
     </table>

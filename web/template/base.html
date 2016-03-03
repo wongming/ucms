@@ -5,6 +5,12 @@ $def with (main)
     <meta charset="utf-8">
     <link rel="stylesheet" href="/static/lib/bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="/static/css/common.css" type="text/css">
+    <!-- js files -->
+    <script src="/static/lib/jquery/jquery.min.js"></script>
+    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
+    $if main.jsFiles:
+        $for js in main.jsFiles.split():
+            <script src="$js"></script>
 </head>
 <body>
     <div class="container">
@@ -41,7 +47,7 @@ $def with (main)
                         <li><a href="/driver">Driver</a></li>
                         <li><a href="/case">Case</a></li>
                         <li><a href="/plan">Plan</a></li>
-                        <li><a href="/app">发布</a></li>
+                        <li><a href="/app">App</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -65,12 +71,5 @@ $def with (main)
             <div>@author wangming</div>
         </div>
     </div>
-    <!-- js files -->
-    <script src="/static/lib/jquery/jquery.min.js"></script>
-    <script src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
-
-    $if main.jsFiles:
-        $for js in main.jsFiles.split():
-            <script src="$js"></script>
 </body>
 </html>

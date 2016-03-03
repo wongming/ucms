@@ -88,3 +88,207 @@
 [2016-02-29 20:19:52,367][27044][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
 [2016-02-29 20:19:52,367][27044][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
 [2016-02-29 20:19:52,403][27044][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:16:58,919][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:16:58,919][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:16:58,919][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-01 15:16:58,920][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-01 15:16:58,965][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:16:58,965][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:16:58,999][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:17:00,585][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:17:00,585][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:17:00,586][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_DRIVER     limit 0,10;
+[2016-03-01 15:17:00,586][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_DRIVER     limit 0,10;
+[2016-03-01 15:17:00,588][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_DRIVER ;
+[2016-03-01 15:17:00,588][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_DRIVER ;
+[2016-03-01 15:17:00,592][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_DRIVER 
+[2016-03-01 15:17:00,592][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_DRIVER 
+[2016-03-01 15:17:00,596][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:17:48,106][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:17:48,113][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:17:48,114][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-01 15:17:48,114][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-01 15:17:48,115][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:17:48,115][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:17:48,165][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:17:54,083][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:17:54,083][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:17:54,083][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "1";
+[2016-03-01 15:17:54,083][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "1";
+[2016-03-01 15:17:54,100][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:17:54,100][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:17:54,128][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:18:07,208][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:18:07,208][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:18:07,208][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "1";
+[2016-03-01 15:18:07,209][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "1";
+[2016-03-01 15:18:07,210][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:18:07,210][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:18:07,256][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:21:01,388][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:21:01,389][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:21:06,487][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:21:06,487][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:21:06,490][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_APP(name,type,repository_path,access_url,repository_type,description) values ("amss","JavaWeb","https://192.168.88.210/repos/csdc/amss/trunk","http://localhost:8080/amss","SVN","中国高校社科数据中心授权管理与服务系统");
+[2016-03-01 15:21:06,517][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:21:06,517][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:21:06,519][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:21:06,519][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:21:06,551][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:26:03,077][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:26:03,077][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:26:03,077][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-01 15:26:03,077][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-01 15:26:03,081][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:26:03,081][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:26:03,140][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:26:06,913][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:26:06,913][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:26:06,913][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "7";
+[2016-03-01 15:26:06,913][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "7";
+[2016-03-01 15:26:06,914][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:26:06,914][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:26:06,950][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:26:35,566][30469][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:26:35,566][30469][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:26:40,650][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:26:40,650][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:26:40,651][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_APP(name,type,repository_path,access_url,repository_type,description) values ("amss","JavaWeb","https://192.168.88.210/repos/csdc/amss/trunk","http://localhost:8080/amss","SVN","中国高校社科数据中心授权管理与服务系统");
+[2016-03-01 15:26:40,660][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:26:40,660][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:26:40,661][30469][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:26:40,661][30469][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:26:40,689][30469][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:26:50,735][30562][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:26:50,736][30562][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:26:50,736][30562][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-01 15:26:50,736][30562][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-01 15:26:50,737][30562][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:26:50,738][30562][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:26:50,790][30562][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:27:43,700][30562][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:27:43,701][30562][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:27:43,733][30562][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:27:43,733][30562][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:27:43,734][30562][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_APP(name,type,repository_path,access_url,repository_type,description) values ("amss","JavaWeb","https://192.168.88.210/repos/csdc/amss/trunk","http://localhost:8080/amss","SVN","中国高校社科数据中心授权管理与服务系统");
+[2016-03-01 15:27:43,757][30562][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:27:43,758][30562][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:27:43,759][30562][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:27:43,759][30562][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:27:43,802][30562][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:30:07,779][30597][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:30:07,787][30597][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:30:17,948][30597][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:30:17,948][30597][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:30:17,949][30597][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_APP(name,type,repository_path,access_url,repository_type,description) values ("amss","JavaWeb","https://192.168.88.210/repos/csdc/amss/trunk","http://localhost:8080/amss","SVN","中国高校社科数据中心授权管理与服务系统");
+[2016-03-01 15:30:17,958][30597][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:30:17,958][30597][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:30:17,960][30597][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:30:17,960][30597][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:30:17,988][30597][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:39:05,515][30894][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:39:05,516][30894][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:39:15,669][30894][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:39:15,676][30894][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:39:15,678][30894][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:39:15,678][30894][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:39:15,712][30894][ERROR][table.py:insert:81]: duplicate data in T_APP [amss]
+[2016-03-01 15:39:15,712][30894][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:40:08,812][30927][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:40:08,812][30927][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:40:08,844][30927][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:40:08,845][30927][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:40:08,847][30927][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_APP(name,type,repository_path,access_url,repository_type,description) values ("amss","JavaWeb","https://192.168.88.210/repos/csdc/amss/trunk","http://localhost:8080/amss","SVN","中国高校社科数据中心授权管理与服务系统");
+[2016-03-01 15:40:08,859][30927][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:40:08,859][30927][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:40:08,861][30927][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:40:08,861][30927][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:40:08,931][30927][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:42:20,226][30960][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:42:20,226][30960][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:42:20,229][30960][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 15:42:59,036][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 15:42:59,037][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 15:42:59,058][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:42:59,058][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP  where  name = "amss"    limit 0,1;
+[2016-03-01 15:42:59,059][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: insert into T_APP(name,type,repository_path,access_url,repository_type,description) values ("amss","JavaWeb","https://192.168.88.210/repos/csdc/amss/trunk","http://localhost:8080/amss","SVN","中国高校社科数据中心授权管理与服务系统");
+[2016-03-01 15:42:59,067][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:42:59,068][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where name = "amss";
+[2016-03-01 15:42:59,070][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 15:42:59,070][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 15:42:59,124][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 17:26:58,355][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 17:26:58,356][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 17:26:58,356][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "8";
+[2016-03-01 17:26:58,356][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "8";
+[2016-03-01 17:26:58,358][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 17:26:58,359][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 17:26:58,423][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-01 17:27:05,502][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-01 17:27:05,502][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-01 17:27:05,502][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "8";
+[2016-03-01 17:27:05,502][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "8";
+[2016-03-01 17:27:05,503][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-01 17:27:05,503][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-01 17:27:05,540][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 08:08:21,505][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 08:08:21,506][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 08:08:21,508][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 08:08:21,508][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 08:08:21,510][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_PLAN     limit 0,10;
+[2016-03-02 08:08:21,511][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_PLAN     limit 0,10;
+[2016-03-02 08:08:21,563][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_PLAN ;
+[2016-03-02 08:08:21,563][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_PLAN ;
+[2016-03-02 08:08:21,578][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select count(*) from T_PLAN 
+[2016-03-02 08:08:21,578][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select count(*) from T_PLAN 
+[2016-03-02 08:08:21,585][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 08:08:21,587][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 08:08:22,133][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 08:08:22,133][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 08:08:22,133][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-02 08:08:22,133][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-02 08:08:22,142][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 08:08:22,142][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 08:08:22,185][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 08:08:25,883][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 08:08:25,883][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 08:08:25,884][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "12";
+[2016-03-02 08:08:25,884][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "12";
+[2016-03-02 08:08:25,910][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 08:08:25,910][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 08:08:25,942][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 09:24:11,511][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 09:24:11,512][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 09:24:11,512][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "12";
+[2016-03-02 09:24:11,512][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "12";
+[2016-03-02 09:24:11,523][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 09:24:11,523][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 09:24:11,582][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 15:48:13,902][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 15:48:13,903][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 15:48:13,903][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-02 15:48:13,903][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-02 15:48:13,937][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 15:48:13,937][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 15:48:14,045][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 15:48:21,705][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 15:48:21,707][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 15:48:21,707][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-02 15:48:21,707][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-02 15:48:21,709][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 15:48:21,709][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 15:48:21,758][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 15:49:17,109][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 15:49:17,110][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 15:49:17,110][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP    ;
+[2016-03-02 15:49:17,110][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP    ;
+[2016-03-02 15:49:17,112][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 15:49:17,112][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 15:49:17,168][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
+[2016-03-02 15:49:28,986][30981][INFO][mysql_wrapper.py:_do_use:49]: atrs_test
+[2016-03-02 15:49:28,986][30981][DEBUG][mysql_wrapper.py:_init_db:45]: Mysql init success.
+[2016-03-02 15:49:28,986][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: select * from T_APP where id = "1";
+[2016-03-02 15:49:28,986][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: select * from T_APP where id = "1";
+[2016-03-02 15:49:28,994][30981][DEBUG][mysql_wrapper.py:query:89]: query cmd: show fields from T_APP ;
+[2016-03-02 15:49:28,994][30981][DEBUG][mysql_wrapper.py:execute:72]: execute cmd: show fields from T_APP ;
+[2016-03-02 15:49:29,057][30981][DEBUG][mysql_wrapper.py:close:67]: Close Database: [atrs_test] success.
