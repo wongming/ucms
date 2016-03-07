@@ -116,6 +116,13 @@ button {
 #list_container {
   margin: 0 0 -10px 0;
 }
+/*thead td{
+  border-style: ridge;
+  border-width: 1px;
+  border-color: rgb(179, 196, 213);
+  background-color: rgb(100, 153, 204);
+  color: white;
+}*/
 thead td{
   border-style: ridge;
   border-width: 1px;
@@ -243,4 +250,7 @@ tbody td{
     background-size: 25px 25px;
     background-repeat:no-repeat;
     background-position: center;
+}
+.panel {
+    margin: 0;
 }

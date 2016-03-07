@@ -27,6 +27,7 @@ class PlanController(BaseController):
         return RT.SUCC, ''
 
     def addPlan(self, submit_data):
+        
         ret = self.planTable.insert(submit_data)
         return ret
 

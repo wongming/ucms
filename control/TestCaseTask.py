@@ -16,9 +16,9 @@ class TestCaseTask(threading.Thread):
         print case_result
         self.case_result_id = case_result['id']
         self.case_name = case_result['case_name']
-        self.case_path = cur_dir+'/../workbench/tc_'+self.case_name
+        self.case_path = cur_dir+'/../workbench/case/tc_'+self.case_name
         self.case_path = os.path.normpath(self.case_path)
-        self.log_path = cur_dir+'/../workbench/log/tc_'+self.case_name+'_id_'+str(self.case_result_id)+'.log'
+        self.log_path = cur_dir+'/../workbench/case/log/tc_'+self.case_name+'_id_'+str(self.case_result_id)+'.log'
         self.log_path = os.path.normpath(self.log_path)
         self.caseTable = CaseTable()
         self.caseResultTable = CaseResultTable()

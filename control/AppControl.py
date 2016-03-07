@@ -12,6 +12,7 @@ from BaseControl import RT
 from ReleaseTask import ReleaseTask
 import file_util
 import process
+import urllib2
 from table import AppTable
 
 class AppController(BaseController):
@@ -46,6 +47,12 @@ class AppController(BaseController):
             return None
         return ret[1]
 
+    def count(self,cond_dict={}):
+        ret = self.table.count(cond_dict)
+        if not ret[0]==0:
+            return 0
+        return ret[1]
+        
     def updateApp(self, id, value_map):
         ret = self.table.update({'id': id}, value_map)
         return ret

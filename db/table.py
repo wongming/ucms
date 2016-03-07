@@ -95,6 +95,10 @@ class BaseTable(object):
         ret = self.db.get_all_rows_by_dict(self.TABLE_NAME, cond_dict, order_dict=order_dict)
         return (RT.SUCC, ret)
 
+    def unique(self, cond_dict):
+        return self.db.isunique_by_dict(self.TABLE_NAME,cond_dict)
+
+
 def gen_field_str(field_dict):
     return field_dict['name'] + ' ' + field_dict['type']  + ' ' + field_dict['attr']
 

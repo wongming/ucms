@@ -1,0 +1,70 @@
+$var baseTitle: System Settings
+$var navTitle: setting
+$var jsFiles: /static/js/setting.js
+<div class="title_bar">
+    <div class="title_path2">
+        <ol class="breadcrumb">
+            <li class="top_path glyphicon glyphicon-home"></li>
+            <li class="top_path"><a href="/setting">System Settings</a></li>
+        </ol>
+    </div>
+</div>
+<div class="view_container">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#stest_conf">
+                        Stest Conf
+                    </a>
+                </h4>
+            </div>
+            <div id="stest_conf" class="panel-collapse collapse">
+               <div class="panel-body">
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Driver Path:</label>
+                       <label class="col-sm-10 control-label">~/.stest/driver</label>
+                   </div>
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Email Template:</label>
+                       <label class="col-sm-10 control-label">~/.stest/EmailTemplate.html</label>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#release_conf">
+                        Release Conf
+                    </a>
+                </h4>
+            </div>
+            <div id="release_conf" class="panel-collapse collapse">
+               <div class="panel-body">
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Tomcat path:</label>
+                       <label class="col-sm-10 control-label">/Library/tomcat7/</label>
+                   </div>
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Svn name:</label>
+                       <label class="col-sm-10 control-label">wangming</label>
+                   </div>
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Svn Password:</label>
+                       <label class="col-sm-10 control-label">wangming</label>
+                   </div>
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Git name:</label>
+                       <label class="col-sm-10 control-label">wangming</label>
+                   </div>
+                   <div class="col-md-12">
+                       <label class="col-sm-2">Git Password:</label>
+                       <label class="col-sm-10 control-label">wangming</label>
+                   </div>
+               </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -4,6 +4,7 @@ import web
 
 cur_dir = os.path.split(os.path.realpath(__file__))[0]
 sys.path.append(cur_dir+'/../control/')
+sys.path.append(cur_dir+'/../lib/')
 
 from DriverControl import DriverController
 from CaseControl import CaseController
@@ -11,27 +12,33 @@ from PlanControl import PlanController
 from AppControl import AppController
 from BaseControl import BaseController
 from BaseControl import RT
+import ps_util
 
 web.config.debug = False
 
 urls = (
     "/","Index",
     "/dashboard","Dashboard",
+    "/setting","Setting",
     "/driver","ListDriver",
     "/driver/(\d+)","ViewDriver",
+    "/driver/(\d+)/mod","ModifyDriver",
     "/driver/add","AddDriver",
     "/case","ListCase",
     "/case/(\d+)","ViewCase",
+    "/case/(\d+)/mod","ModifyCase",
     "/case/(\d+)/run","RunCase",
     "/case/(.+)/result","ListCaseResult",
     "/case/add","AddCase",
     "/plan","ListPlan",
     "/plan/(\d+)","ViewPlan",
+    "/plan/(\d+)/mod","ModifyPlan",
     "/plan/(\d+)/run","RunPlan",
     "/plan/(.+)/result","ListPlanResult",
     "/plan/add","AddPlan",
     "/app","ListApp",
     "/app/(\d+)","ViewApp",
+    "/app/(\d+)/mod","ModApp",
     "/app/add","AddApp",
     "/app/(\d+)/release","ReleaseApp"
 )
@@ -53,8 +60,38 @@ class Index:
 
 class Dashboard:
     def GET(self):
+        driverCtl = DriverController()
+        caseCtl = CaseController()
+        planCtl = PlanController()
+        appCtl = AppController()
+        statisticInfo={}
+        totalDrivers = driverCtl.count()
+        totalCases = caseCtl.count()
+        totalPlans = planCtl.count()
+        totalApps = appCtl.count()
+        statisticInfo['totalDrivers'] = totalDrivers
+        statisticInfo['totalCases'] = totalCases
+        statisticInfo['totalPlans'] = totalPlans
+        statisticInfo['totalApps'] = totalApps
+        #plan statistic
+        succPlans = planCtl.countPlanResult({'status':'success'})
+        errPlans = planCtl.countPlanResult({'status':'failed'})
+        rngPlans = planCtl.countPlanResult({'status':'running'})
+        statisticInfo['succPlans'] = succPlans
+        statisticInfo['errPlans'] = errPlans
+        statisticInfo['rngPlans'] = rngPlans
+        #case statistic
+        succCases = planCtl.countPlanResult({'status':'success'})
+        errCases = planCtl.countPlanResult({'status':'failed'})
+        rngCases = planCtl.countPlanResult({'status':'running'})
+        statisticInfo['succCases'] = succCases
+        statisticInfo['errCases'] = errCases
+        statisticInfo['rngCases'] = rngCases
+        return render.dashboard(statisticInfo)
 
-        return render.dashboard()
+class Setting:
+    def GET(self):
+        return render.setting()
 
 class ListDriver(object):
     def POST(self):
@@ -131,6 +168,7 @@ class AddCase(object):
         if not ret[0] == RT.SUCC:
             return [RT.ERR, ret[1]]
         case = ctl.getCaseByName(submit_data['name'])
+        print case
         if not case:
             return [RT.ERR, 'insert case succ, select error']
         return [RT.SUCC, case['id']]
@@ -261,15 +299,17 @@ class ReleaseApp(object):
 
 #enable task Thread
 def startTestTask():
+    ps_util.kill(keyword='TestCaseTask')
+    ps_util.kill(keyword='TestPlanTask')
     tc_task_script = cur_dir+'/../control/TestCaseTask.py'
     tc_task_log = cur_dir+'/../log/caseTask.log'
     tp_task_script = cur_dir+'/../control/TestPlanTask.py'
     tp_task_log = cur_dir+'/../log/planTask.log'
     #print os.system('python %s >>%s 2>&1 &' % (tc_task_script,tc_task_log))
     #print os.system('python %s >>%s 2>&1 &' % (tp_task_script,tp_task_log))
-    #os.system('python %s &' % tc_task_script)
+    os.system('python %s &' % tc_task_script)
     os.system('python %s &' % tp_task_script)
 
 if __name__ == "__main__":
-    #startTestTask()
+    startTestTask()
     app.run()

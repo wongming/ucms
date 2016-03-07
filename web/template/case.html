@@ -11,103 +11,109 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
         </ol>
     </div>
     <div class="title_operate">
-        <button id="run_case" class="btn">Run</button>
-        <a href="/case/add"><button id ="add_case" class="btn">添加</button></a>
-        <a href="/case/mod/$case['id']"><button id="mod_case" class="btn">修改</button></a>
-        <a href="/case/del/$case['id']"><button id="del_case" class="btn">删除</button></a>
+        <button id="run_case" class="btn btn-sm">Run</button>
+        <a href="/case/add"><button id ="add_case" class="btn btn-sm">添加</button></a>
+        <a href="/case/mod/$case['id']"><button id="mod_case" class="btn btn-sm">修改</button></a>
+        <a href="/case/del/$case['id']"><button id="del_case" class="btn btn-sm">删除</button></a>
     </div>
 </div>
 <div class="view_container">
-    <div class="row">
-        <input id="case_id" type="hidden" name="case_id" value="$case['id']">
-        <input id="case_name" type="hidden" name="case_name" value="$case['name']">
-        <input id="is_executed" type="hidden" name="is_executed" value="$isExecuted">
-        <div class="col-md-12">
-            <label class="col-sm-2">Name:</label>
-            <label class="col-sm-10 control-label">$case['name']</label>
+    <div class="row panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">基本信息</h3>
         </div>
-        <div class="col-md-12">
-            <label class="col-sm-2">Driver:</label>
-                <label class="col-sm-10 control-label">$case['driver']</label>
-        </div>
-        <div class="col-md-12">
-            <label class="col-sm-2">Description:</label>
-            <label class="col-sm-10">$case['description']</label>
-        </div>
-        <div class="col-md-12">
-            <label class="col-sm-2">变量:</label>
-            $if len(case['param']):
-                <div class="col-sm-10">
-                    <table class="table table-bordered">
-                        <thead class="breadcrumb">
-                            <tr>
-                                <th>Key</th>
-                                <th>默认值</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            $for (k, v) in case['param'].items():
-                                <tr>
-                                    <td>$k</td>
-                                    <td>$v</td>
-                                </tr>
-                        </tbody>
-                    </table>
-            $else:
-                <label class="col-sm-10 control-label">no env params</label>
-            </div>
-        </div>
-        $if isExecuted:
+        <div class="panel-body">
+            <input id="case_id" type="hidden" name="case_id" value="$case['id']">
+            <input id="case_name" type="hidden" name="case_name" value="$case['name']">
+            <input id="is_executed" type="hidden" name="is_executed" value="$isExecuted">
             <div class="col-md-12">
-                <label class="col-sm-2" style="font-size: 18;padding: 0;">运行记录:</label>
-                <label class="col-sm-10"></label>
+                <label class="col-sm-2">Name:</label>
+                <label class="col-sm-10 control-label">$case['name']</label>
             </div>
-            <div class="col-md-12" style="border-top-width: 1;">
-                <textarea id="list_template" style="display: none;">
-                    <table class="table table-striped table-hover">
-                        <thead>
+            <div class="col-md-12">
+                <label class="col-sm-2">Driver:</label>
+                    <label class="col-sm-10 control-label">$case['driver']</label>
+            </div>
+            <div class="col-md-12">
+                <label class="col-sm-2">Description:</label>
+                <label class="col-sm-10">$case['description']</label>
+            </div>
+            <div class="col-md-12">
+                <label class="col-sm-2">变量:</label>
+                $if len(case['param']):
+                    <div class="col-sm-10">
+                        <table class="table table-bordered">
+                            <thead class="breadcrumb">
+                                <tr>
+                                    <th>Key</th>
+                                    <th>默认值</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                $for (k, v) in case['param'].items():
+                                    <tr>
+                                        <td>$k</td>
+                                        <td>$v</td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                $else:
+                    <label class="col-sm-10 control-label">no env params</label>
+            </div>
+        </div>
+    </div>
+        $if isExecuted:
+            <div class="row panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">运行记录</h3>
+                </div>
+                <div class="col-md-12" style="border-top-width: 1px;padding: 2px;">
+                    <textarea id="list_template" style="display: none;">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>Case Name</td>
+                                <td>Status</td>
+                                <td>Start Time</td>
+                                <td>Stop Time</td>
+                                <td>User</td>
+                                <td>Description</td>
+                                <td>Log</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {for item in pageData}
+                            <tr>
+                                <td>$${item.id}</td>
+                                <td>$${item.case_name}</td>
+                                <td>$${item.status}</td>
+                                <td>$${item.start_time}</td>
+                                <td>$${item.stop_time}</td>
+                                <td>$${item.user}</td>
+                                <td>$${item.description}</td>
+                                <td class="view_log_path" title="$${item.log}" id="$${item.log}" onclick="copyLog()">    </td>
+                            </tr>
+                            {/for}
+                            </tbody>
+                        </table>
+                    </textarea>
+                    <div id="list_container" style="display: none;"></div>
+                    <table class="list_bottom">
                         <tr>
-                            <td>ID</td>
-                            <td>Case Name</td>
-                            <td>Status</td>
-                            <td>Start Time</td>
-                            <td>Stop Time</td>
-                            <td>User</td>
-                            <td>Description</td>
-                            <td>Log</td>
+                            <td class="list_info" id="list_td_foot">
+                                共<span id="list_totalDataNo"></span>条
+                                每页显示<input id="list_pageSize" type="text"/>条
+                                <button id ="list_firstPage" class = "btn btn-sm">首页</button>
+                                <button id ="list_prevPage" class = "btn btn-sm">上一页</button>
+                                第<input id="list_currentPageNo" type="text"></input>/
+                                <span id="list_pageNo"></span>页
+                                <button id ="list_nextPage" class = "btn btn-sm" >下一页</button>
+                                <button id ="list_lastPage" class = "btn btn-sm" >末页</button>
+                            </td>
                         </tr>
-                        </thead>
-                        <tbody>
-                        {for item in pageData}
-                        <tr>
-                            <td>$${item.id}</td>
-                            <td>$${item.case_name}</td>
-                            <td>$${item.status}</td>
-                            <td>$${item.start_time}</td>
-                            <td>$${item.stop_time}</td>
-                            <td>$${item.user}</td>
-                            <td>$${item.description}</td>
-                            <td class="view_log_path" title="$${item.log}" id="$${item.log}" onclick="copyLog()">    </td>
-                        </tr>
-                        {/for}
-                        </tbody>
                     </table>
-                </textarea>
-                <div id="list_container" style="display: none;"></div>
-                <table class="list_bottom">
-                    <tr>
-                        <td class="list_info" id="list_td_foot">
-                            共<span id="list_totalDataNo"></span>条
-                            每页显示<input id="list_pageSize" type="text"/>条
-                            <button id ="list_firstPage" class = "btn btn-sm">首页</button>
-                            <button id ="list_prevPage" class = "btn btn-sm">上一页</button>
-                            第<input id="list_currentPageNo" type="text"></input>/
-                            <span id="list_pageNo"></span>页
-                            <button id ="list_nextPage" class = "btn btn-sm" >下一页</button>
-                            <button id ="list_lastPage" class = "btn btn-sm" >末页</button>
-                        </td>
-                    </tr>
-                </table>
+                </div>
             </div>
     </div>
 </div>

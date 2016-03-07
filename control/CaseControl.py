@@ -26,12 +26,24 @@ class CaseController(BaseController):
         case_result['create_time'] = datetime.datetime.now()
         ret = self.caseResultTable.insert(case_result)
         if not ret[0]==RT.SUCC:
-            return RT.ERR, 'insert case result in db failed and case name is [%s]' % cs['name']
+            return RT.ERR, 'insert case result to db failed and case name is [%s]' % cs['name']
         return RT.SUCC, ''
 
     def addCase(self, submit_data):
+        case_info = {}
+        case_info['name'] = submit_data['name']
+        case_info['driver'] = submit_data['driver']
+        case_info['data'] = json.loads(submit_data['param'])
+        case_name = submit_data['name']
+        case_home_path = cur_dir+'/../workbench/case/'
+        case_path = os.path.join(case_home_path,'tc_'+case_name)
+        case_file = open(case_path, 'w')
+        case_file.write(json.dumps(case_info, indent=4))
+        case_file.close()
         ret = self.caseTable.insert(submit_data)
-        return ret
+        if not ret[0]==RT.SUCC:
+            return RT.ERR, 'insert case to db failed and case name is [%s]' % case_name
+        return RT.SUCC, ''
 
     def getCase(self, id):
         ret = self.caseTable.select(id)
