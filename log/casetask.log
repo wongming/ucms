@@ -20,3 +20,9 @@
 [2016-03-06 21:24:20,229][48405][INFO][TestCaseTask.py:prepareTask:28]: prepare case task [case_true],[29]
 [2016-03-06 21:24:20,231][48405][INFO][TestCaseTask.py:runTask:34]: start run case task
 [2016-03-06 21:24:20,292][48405][INFO][TestCaseTask.py:stopTask:31]: stop case task[case_true],[29]
+[2016-03-07 15:50:48,079][50854][INFO][TestCaseTask.py:prepareTask:28]: prepare case task [case_true],[30]
+[2016-03-07 15:50:48,080][50854][INFO][TestCaseTask.py:runTask:34]: start run case task
+[2016-03-07 15:50:48,110][50854][INFO][TestCaseTask.py:stopTask:31]: stop case task[case_true],[30]
+[2016-03-07 15:50:59,148][50854][INFO][TestCaseTask.py:prepareTask:28]: prepare case task [case_true2],[31]
+[2016-03-07 15:50:59,148][50854][INFO][TestCaseTask.py:runTask:34]: start run case task
+[2016-03-07 15:50:59,183][50854][INFO][TestCaseTask.py:stopTask:31]: stop case task[case_true2],[31]

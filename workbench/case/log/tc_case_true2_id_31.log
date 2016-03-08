@@ -1,0 +1,13 @@
+[2016.03.07 15:50:59.175608][tc_case_true2]: start to run...
+[2016.03.07 15:50:59.175668][tc_case_true2#runTest]: start to run...
+[2016.03.07 15:50:59.175705][tc_case_true2#runTest]: test success.
+[2016.03.07 15:50:59.175741][tc_case_true2#runTest]: stop running.
+[2016.03.07 15:50:59.175773][tc_case_true2]: stop running.
+
+Test Build          /Users/wangming/workspace/atrs/workbench/case/tc_case_true2
+Start Time          2016.03.07 15:50:59.175581
+Stop Time           2016.03.07 15:50:59.176106
+Duration            0.000525 seconds
+Statistics
+    All=1 Passed=1 Failed=0 Aborted=0
+

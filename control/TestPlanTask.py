@@ -33,6 +33,10 @@ class TestPlanTask(threading.Thread):
         if not ret[0]==RT.SUCC:
             logger.error('update PlanResultTable [%s] failed' % self.plan_result_id)
             return
+        ret = self.planTable.update({'name': self.plan_name}, {'last_status': 'running'})
+        if not ret[0]==RT.SUCC:
+            logger.error("update PlanTable's status [%s] failed" % self.plan_name)
+            return
         test_result = stest.runPlan(self.plan_path)
         test_status = 'success' if test_result.wasSuccessful() else 'failed'
         test_start_time =test_result.startTime
@@ -40,6 +44,10 @@ class TestPlanTask(threading.Thread):
         log_file = open(self.log_path,'w')
         log_file.write(test_result.log.getvalue())
         log_file.close()
+        ret = self.planTable.update({'name': self.plan_name}, {'last_status': test_status})
+        if not ret[0]==RT.SUCC:
+            logger.error("update PlanTable's status [%s] failed" % self.plan_name)
+            return
         ret = self.planResultTable.update({'id': self.plan_result_id}, {'status': test_status, 'start_time': test_start_time, 'stop_time': test_stop_time,'log':self.log_path})
         if not ret[0]==RT.SUCC:
             logger.error("update PlanResultTable's result [%s] failed" % self.plan_result_id)

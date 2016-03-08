@@ -1,0 +1,14 @@
+[2016.03.07 16:08:28.297273][case_true]: start to run...
+[2016.03.07 16:08:28.297346][case_true]: test aborted:
+No such file or directory: /Users/wangming/workspace/atrs/workbench/case/case_true[2016.03.07 16:08:28.297408][case_true]: stop running.
+[2016.03.07 16:08:28.297448][case_true2]: start to run...
+[2016.03.07 16:08:28.297482][case_true2]: test aborted:
+No such file or directory: /Users/wangming/workspace/atrs/workbench/case/case_true2[2016.03.07 16:08:28.297535][case_true2]: stop running.
+
+Test Build          ppppp
+Start Time          2016.03.07 16:08:28.297232
+Stop Time           2016.03.07 16:08:28.297567
+Duration            0.000335 seconds
+Statistics
+    All=2 Passed=0 Failed=2 Aborted=0
+

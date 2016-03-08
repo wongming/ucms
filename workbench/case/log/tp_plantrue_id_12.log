@@ -1,0 +1,11 @@
+[2016.03.07 15:49:47.350116][case_true;case_true2]: start to run...
+[2016.03.07 15:49:47.350181][case_true;case_true2]: test aborted:
+No such file or directory: /Users/wangming/workspace/atrs/workbench/case/case_true;case_true2[2016.03.07 15:49:47.350263][case_true;case_true2]: stop running.
+
+Test Build          plantrue
+Start Time          2016.03.07 15:49:47.350078
+Stop Time           2016.03.07 15:49:47.350306
+Duration            0.000228 seconds
+Statistics
+    All=1 Passed=0 Failed=1 Aborted=0
+

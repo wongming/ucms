@@ -27,7 +27,30 @@ class PlanController(BaseController):
         return RT.SUCC, ''
 
     def addPlan(self, submit_data):
-        
+        plan_info = {}
+        '''
+        {
+          "Plan Name":"plan_demo",
+          "Case List":"tc_case_demo_1",
+          "Email List":"byonecry@qq.com",
+          "Log":"Warn"
+        }
+        '''
+        plan_info['Plan Name'] = submit_data['name']
+        case_list = submit_data['case_list'].split(",")
+        case_list_str = ''
+        for case_name in case_list:
+            if case_list_str=='':
+                case_list_str = 'tc_' + case_name
+            else:
+                case_list_str = case_list_str + ',tc_' + case_name
+        plan_info['Case List'] = case_list_str
+        plan_info['Email List'] = submit_data['people']
+        plan_home_path = cur_dir+'/../workbench/case/'
+        plan_path = os.path.join(plan_home_path, submit_data['name']+'.json')
+        plan_file = open(plan_path, 'w')
+        plan_file.write(json.dumps(plan_info, indent=4))
+        plan_file.close()
         ret = self.planTable.insert(submit_data)
         return ret
 
