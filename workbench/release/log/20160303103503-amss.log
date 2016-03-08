@@ -1,7 +1,0 @@
-Buildfile: /Users/wangming/workspace/atrs/workbench/release/amss.xml
-
-generate.orignal.war:
-      [war] Building war: /Users/wangming/workspace/atrs/workbench/release/project/amss.war
-
-BUILD SUCCESSFUL
-Total time: 3 seconds

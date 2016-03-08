@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+
+	<!-- 启用自动扫描 -->
+	<context:component-scan base-package="com.myHibernate"></context:component-scan>
+
+	<!-- 事务管理 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"> 
+		<property name="driverClass" value="com.mysql.jdbc.Driver" /> <property name="jdbcUrl" 
+		value="jdbc:mysql://localhost:3306/sshdemo" /> <property name="maxIdleTime" 
+		value="25000" /> <property name="properties"> <props> <prop key="user">root</prop> 
+		<prop key="password">''</prop> <prop key="c3p0.acquire_increment">2</prop> 
+		<prop key="c3p0.max_size">20</prop> <prop key="c3p0.min_size">1</prop> </props> 
+		</property> </bean> -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://192.168.88.220:3306/atrs?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="atrs" />
+		<property name="password" value="p1013atrs702" />
+	</bean>
+
+
+	<!-- 定义Hibernate SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- dataSource可以为任意的数据源 例如DBCP、C3P0 -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!-- 映射文件路径 -->
+		<property name="mappingResources">
+			<value>com/myHibernate/bean/User.hbm.xml</value>
+		</property>
+		<!-- 其他的Hibernate常用配置 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

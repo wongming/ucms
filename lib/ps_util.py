@@ -17,7 +17,7 @@ def killByKeyword(keyword):
     pids = []
     for line in ps_info:
         infos = line.split(' ')
-        pids.append(infos[0])
+        pids.append(infos[1])
     for pid in pids:
         killByPid(pid)
     return True

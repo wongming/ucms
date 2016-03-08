@@ -17,6 +17,7 @@ import ant_util,file_util,process
 
 logging.config.fileConfig(cur_dir+'/../conf/log.conf')
 logger = logging.getLogger('releasetask')
+
 class ReleaseTask(threading.Thread):
     def __init__(self, id):
         self.app_id = id
@@ -82,6 +83,8 @@ class ReleaseTask(threading.Thread):
             file_util.Copy(app_war, tomcat_path)
         else:
             pass
+        #java -cp /Users/wangming/workspace/atrs/workbench/release/lib/wlfullclient.jar weblogic.Deployer -adminurl t3://192.168.88.253:7001 -username weblogic -password n1702csdc -undeploy -name sshdemo_file
+        #java -cp /Users/wangming/workspace/atrs/workbench/release/lib/wlfullclient.jar weblogic.Deployer -adminurl t3://192.168.88.253:7001 -username weblogic -password n1702csdc -deploy -upload /Users/wangming/Downloads/sshdemo_file.war
         ret = isAppAccessed(self.app['access_url'])
         if not ret:
             self.appTable.update({'id': self.app_id}, {'status': 'Down', 'last_release_status': 'Failed','last_release_info': 'access url failed'})
@@ -92,6 +95,7 @@ class ReleaseTask(threading.Thread):
         self.prepareTask()
         self.runTask()
         self.stopTask()
+
 
 def getCurrentTimeStr():
     now = datetime.datetime.now()

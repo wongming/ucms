@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<package name="myStruts" extends="struts-default" namespace="/">
+		<action name="regedit" class="com.myHibernate.action.RegeditAction" method="reg">
+			<result name="regAfter">/regedit.jsp</result>
+		</action>
+		<action name="login" class="com.myHibernate.action.LoginAction" method="login">
+			<result name="loginAfter">/login.jsp</result>
+		</action>
+	</package>
+</struts>
