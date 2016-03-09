@@ -11,6 +11,7 @@ $var jsFiles:
         </ol>
     </div>
     <div class="list_search">
+        <a href="/app/add"><button id ="list_add" class = "btn btn-sm">添加</button></a>
         <span class="list_search_icon glyphicon glyphicon-search"></span>
         <input class="input-medium search-query list_search_input" type="text" id="list_search_input" placeholder="Type keyword here…">
     </div>
@@ -32,9 +33,23 @@ $var jsFiles:
             <tr>
                 <td><a href="app/$app['id']">$app['name']</a></td>
                 <td>$app['type']</td>
-                <td>$app['status']</td>
+                <td>
+                    $if app['status'] =='Down':
+                        <img src="/static/image/x.jpg"  alt="Down" height="20" width="20" />
+                    $elif app['status'] =='Running':
+                        <img src="/static/image/running.gif"  alt="Running" height="20" width="20"/>
+                    $else:
+                        app['status']
+                </td>
                 <td><a href="$app['access_url']">$app['access_url']</a></td>
-                <td>$app['last_release_status']</td>
+                <td>
+                    $if app['last_release_status']=='Success':
+                        <label class="btn btn-xs btn-success">Success</label>
+                    $elif app['last_release_status']=='Failed':
+                        <label class="btn btn-xs btn-danger"> Failed </label>
+                    $else:
+                        <label class="btn btn-xs btn-info">$app['last_release_status']</label>
+                </td>
                 <td>$app['last_release_time']</td>
             </tr>
         </tbody>

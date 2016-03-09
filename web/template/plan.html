@@ -11,10 +11,10 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
         </ol>
     </div>
     <div class="title_operate">
-        <button id="run_plan" class="btn btn-sm">Run</button>
+        <button id="del_plan" class="btn btn-sm">删除</button>
+        <a href="/plan/$plan['id']/mod"><button id="mod_plan" class="btn btn-sm">修改</button></a>
         <a href="/plan/add"><button id ="add_plan" class="btn btn-sm">添加</button></a>
-        <a href="/plan/mod/$plan['id']"><button id="mod_plan" class="btn btn-sm">修改</button></a>
-        <a href="/plan/del/$plan['id']"><button id="del_plan" class="btn btn-sm">删除</button></a>
+        <button id="run_plan" class="btn btn-sm">Run</button>
     </div>
 </div>
 <div class="view_container">
@@ -48,7 +48,14 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
             </div>
             <div class="col-md-12">
                 <label class="col-sm-2">Last Status:</label>
-                <label class="col-sm-10 control-label">$plan['last_status']</label>
+                <label class="col-sm-10 control-label">
+                    $if plan['last_status']=='Success':
+                        <button class="btn btn-xs btn-success">Success</button>
+                    $elif plan['last_status']=='Failed':
+                        <button class="btn btn-xs btn-danger"> Failed </button>
+                    $else:
+                        $plan['last_status']
+                </label>
             </div>
         </div>
     </div>
@@ -69,7 +76,7 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
                             <td>Stop Time</td>
                             <td>Type</td>
                             <td>User</td>
-                            <td>Description</td>
+                            <td>Report</td>
                             <td>Log</td>
                         </tr>
                         </thead>
@@ -78,13 +85,27 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
                         <tr>
                             <td>$${item.id}</td>
                             <td>$${item.plan_name}</td>
-                            <td>$${item.status}</td>
+                            <td>
+                                {if item.status=='Success'}
+                                    <button class="btn btn-xs btn-success">Success</button>
+                                {elseif item.status=='Failed'}
+                                    <button class="btn btn-xs btn-danger"> Failed </button>
+                                {else}
+                                    <button class="btn btn-xs btn-info">$${item.status}</button>
+                                {/if}
+                            </td>
                             <td>$${item.start_time}</td>
                             <td>$${item.stop_time}</td>
-                            <td>$${item.type}</td>
+                            <td>
+                                {if item.type==0}
+                                    Manual
+                                {else}
+                                    Auto
+                                {/if}
+                            </td>
                             <td>$${item.user}</td>
-                            <td>$${item.description}</td>
-                            <!--<td class="view_log_path" title="$${item.log}" id="$${item.log}" onclick="copyLog()">    </td>-->
+                            <td><a href="/report/$${item.report}">$${item.report}</a></td>
+                            <td class="view_log_path" title="$${item.log}" id="$${item.log}" onclick="copyLog()">    </td>
                         </tr>
                         {/for}
                         </tbody>

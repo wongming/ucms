@@ -23,10 +23,12 @@ urls = (
     "/driver","ListDriver",
     "/driver/(\d+)","ViewDriver",
     "/driver/(\d+)/mod","ModifyDriver",
+    "/driver/(\d+)/del","DeleteDriver",
     "/driver/add","AddDriver",
     "/case","ListCase",
     "/case/(\d+)","ViewCase",
     "/case/(\d+)/mod","ModifyCase",
+    "/case/(\d+)/del","DeleteCase",
     "/case/(\d+)/run","RunCase",
     "/case/(.+)/result","ListCaseResult",
     "/case/add","AddCase",
@@ -34,11 +36,14 @@ urls = (
     "/plan/(\d+)","ViewPlan",
     "/plan/(\d+)/mod","ModifyPlan",
     "/plan/(\d+)/run","RunPlan",
+    "/plan/(\d+)/del","DelPlan",
     "/plan/(.+)/result","ListPlanResult",
     "/plan/add","AddPlan",
+    "/report/(.+)","ViewReport",
     "/app","ListApp",
     "/app/(\d+)","ViewApp",
-    "/app/(\d+)/mod","ModApp",
+    "/app/(\d+)/mod","ModifyApp",
+    "/app/(\d+)/del","DeleteApp",
     "/app/add","AddApp",
     "/app/(\d+)/release","ReleaseApp"
 )
@@ -87,6 +92,9 @@ class Dashboard:
         statisticInfo['succCases'] = succCases
         statisticInfo['errCases'] = errCases
         statisticInfo['rngCases'] = rngCases
+        #app info
+        apps = appCtl.getAllApps()
+        statisticInfo['apps'] = apps
         return render.dashboard(statisticInfo)
 
 class Setting:
@@ -106,6 +114,12 @@ class ListDriver(object):
 
     def GET(self):
         return render.listDriver()
+
+class DeleteDriver(object):
+    def POST(self, id):
+        ctl = DriverController()
+        #ret = ctl.deleteDriver(id)
+        return [RT.SUCC,'']
 
 class ViewDriver(object):
     def GET(self, id):
@@ -143,6 +157,12 @@ class ListCase(object):
 
     def GET(self):
         return render.listCase()
+
+class DeleteCase(object):
+    def POST(self, id):
+        ctl = CaseController()
+        #ret = ctl.deleteCase(id)
+        return [RT.SUCC,'']
 
 class ViewCase(object):
     def GET(self, id):
@@ -206,6 +226,12 @@ class ListPlan(object):
     def GET(self):
         return render.listPlan()
 
+class DeletePlan(object):
+    def POST(self, id):
+        ctl = PlanController()
+        #ret = ctl.deletePlan(id)
+        return [RT.SUCC,'']
+
 class ViewPlan(object):
     def GET(self, id):
         ctl = PlanController()
@@ -249,21 +275,29 @@ class ListPlanResult(object):
         result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
         return json.dumps(result)
 
+class ViewReport(object):
+    def GET(self,report):
+        return web.template.frender(cur_dir + '/../workbench/case/log/'+report+'.html')()
+
 class ListApp(object):
     def POST(self):
         ctl = AppController()
         submit_data = web.input()
         startIndex = int(submit_data['startIndex'])
         bufferSize = int(submit_data['bufferSize'])
-        ret = ctl.getApps(startIndex, startIndex+bufferSize)
-        totalDataNo = ctl.count()
-        result = {"pageData": ret[1], "startIndex": startIndex, "bufferSize": bufferSize, "totalDataNo": totalDataNo}
-        return json.dumps(result)
+        apps = ctl.getAllApps(startIndex, startIndex+bufferSize)
+        return json.dumps(apps)
 
     def GET(self):
         ctl = AppController()
         apps = ctl.getAllApps()
         return render.listApp(apps)
+
+class DeleteApp(object):
+    def POST(self, id):
+        ctl = AppController()
+        #ret = ctl.deleteApp(id)
+        return [RT.SUCC,'']
 
 class ViewApp(object):
     def GET(self, id):

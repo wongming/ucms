@@ -49,6 +49,10 @@ class DriverController(BaseController):
             return None
         return ret[1]
 
+    def deleteDriver(self, id):
+        ret = self.table.deleteById(id)
+        return ret
+
     def getDriverByName(self, name):
         ret = self.table.selectByName(name)
         if not ret[0]==RT.SUCC:

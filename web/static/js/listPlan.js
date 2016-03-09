@@ -3,4 +3,4 @@
  * @email byonecry@qq.com
  * @date 2015/11/22.
  */
-pageListShow({"postUrl":"/plan"});
+pageListShow({"postUrl":"/plan","pageSize":10});

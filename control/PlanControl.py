@@ -60,6 +60,10 @@ class PlanController(BaseController):
             return None
         return ret[1]
 
+    def deletePlan(self, id):
+        ret = self.planTable.deleteById(id)
+        return ret
+
     def getPlanByName(self, name):
         ret = self.planTable.selectByName(name)
         if not ret[0]==RT.SUCC:

@@ -11,10 +11,10 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
         </ol>
     </div>
     <div class="title_operate">
-        <button id="run_case" class="btn btn-sm">Run</button>
-        <a href="/case/add"><button id ="add_case" class="btn btn-sm">添加</button></a>
+        <button id="del_case" class="btn btn-sm">删除</button>
         <a href="/case/mod/$case['id']"><button id="mod_case" class="btn btn-sm">修改</button></a>
-        <a href="/case/del/$case['id']"><button id="del_case" class="btn btn-sm">删除</button></a>
+        <a href="/case/add"><button id ="add_case" class="btn btn-sm">添加</button></a>
+        <button id="run_case" class="btn btn-sm">Run</button>
     </div>
 </div>
 <div class="view_container">
@@ -87,7 +87,17 @@ $var jsFiles: /static/lib/pageList/template.js /static/lib/pageList/list.js /sta
                             <tr>
                                 <td>$${item.id}</td>
                                 <td>$${item.case_name}</td>
-                                <td>$${item.status}</td>
+                                <td>
+                                    {if item.status=='Success'}
+                                        <button class="btn btn-xs btn-success">Success</button>
+                                    {elseif item.status=='Failed'}
+                                        <button class="btn btn-xs btn-danger"> Failed </button>
+                                    {elseif item.status=='Running'}
+                                        <button class="btn btn-xs btn-info"> Running </button>
+                                    {else}
+                                        $${item.status}
+                                    {/if}
+                                </td>
                                 <td>$${item.start_time}</td>
                                 <td>$${item.stop_time}</td>
                                 <td>$${item.user}</td>

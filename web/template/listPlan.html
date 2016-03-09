@@ -29,7 +29,15 @@ $var jsFiles: static/lib/pageList/template.js static/lib/pageList/list.js static
         {for item in pageData}
         <tr>
             <td><a href="plan/$${item.id}">$${item.name}</a></td>
-            <td>$${item.last_status}</td>
+            <td>
+                {if item.last_status=='Success'}
+                    <button class="btn btn-xs btn-success">Success</button>
+                {elseif item.last_status=='Failed'}
+                    <button class="btn btn-xs btn-danger"> Failed </button>
+                {else}
+                    $${item.last_status}
+                {/if}
+            </td>
             <td>$${item.people}</td>
             <td>$${item.crontab}</td>
             <td>$${item.description}</td>
@@ -43,7 +51,6 @@ $var jsFiles: static/lib/pageList/template.js static/lib/pageList/list.js static
     <tr>
         <td class="list_operate">
             <a href="/plan/add"><button id ="list_add" class="btn btn-sm">添加</button></a>
-            <button id ="list_del" class="btn btn-sm">删除</button>
         </td>
         <td class="list_info" id="list_td_foot">
             共<span id="list_totalDataNo"></span>条

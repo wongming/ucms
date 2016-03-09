@@ -16,6 +16,9 @@ button {
   color: white;
   background-color: rgb(100, 153, 204);
 }
+table {
+    text-align: center;
+}
 /***************** header *******************/
 .active {
   background-color: rgb(15, 50, 100);
@@ -112,6 +115,11 @@ button {
   margin: 2px;
   float: right;
 }
+.list_search a {
+    float: right;
+    margin-left: 20px;
+    margin-right: 10px
+}
 /***************** list ********************/
 #list_container {
   margin: 0 0 -10px 0;
@@ -196,7 +204,7 @@ tbody td{
     color: rgb(5, 29, 48);
     min-height: 35px;
     margin: 0;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 .panel_name {
 
@@ -221,6 +229,10 @@ tbody td{
     font-size: 20px;
     padding: 10 0 0 5;
 }
+.static_bar ul li a{
+    color: white;
+    text-decoration: underline;
+}
 
 .static_bar .value{
     font-size: 25px;
@@ -232,6 +244,7 @@ tbody td{
 }
 .static_chart ul li{
     float: left;
+    text-align: center;
 }
 .chart_pic {
     height: 200px;
@@ -240,7 +253,15 @@ tbody td{
 .chart_name {
     height: 200px;
     width: 200px;
+    font-size: 20px;
+}
+.application_info table{
+    margin-top: 30px;
     text-align: center;
+}
+.application_info caption{
+    text-align: center;
+    color: black;
     font-size: 20px;
 }
 

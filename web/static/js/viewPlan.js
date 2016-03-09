@@ -19,4 +19,16 @@ $(document).ready(function(){
         }
         return false;
     });
+    $('#del_plan').click(function(){
+        var url = '/plan/'+plan_id+'/del';
+        $.post(url, {}, function(data){
+            data=eval(data);
+            if(data[0]==0){
+                alert('删除plan成功！');
+                location.href = '/plan';
+            }else{
+                alert('删除plan失败！');
+            }
+        })
+    });
 });

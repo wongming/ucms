@@ -51,6 +51,10 @@ class CaseController(BaseController):
             return None
         return ret[1]
 
+    def deleteCase(self, id):
+        ret = self.caseTable.deleteById(id)
+        return ret
+        
     def getCaseByName(self, name):
         ret = self.caseTable.selectByName(name)
         if not ret[0]==RT.SUCC:

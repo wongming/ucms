@@ -14,4 +14,16 @@ $(document).ready(function(){
         }
         return false;
     });
+    $('#del_app').click(function(){
+        var url = '/app/'+app_id+'/del';
+        $.post(url, {}, function(data){
+            data=eval(data);
+            if(data[0]==0){
+                alert('删除app成功！');
+                location.href = '/app';
+            }else{
+                alert('删除app失败！');
+            }
+        })
+    });
 });

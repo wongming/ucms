@@ -98,6 +98,10 @@ class BaseTable(object):
     def unique(self, cond_dict):
         return self.db.isunique_by_dict(self.TABLE_NAME,cond_dict)
 
+    def deleteById(self, id):
+        if not self.clear_row_by_id(self.TABLE_NAME, id):
+            return RT.ERR,'delete row of id = [%s] from table %s' % (id, self.TABLE_NAME)
+        return RT.SUCC, ''
 
 def gen_field_str(field_dict):
     return field_dict['name'] + ' ' + field_dict['type']  + ' ' + field_dict['attr']
@@ -224,6 +228,7 @@ class PlanTable(BaseTable):
     CASE_LIST = {'name':'case_list', 'type':'TEXT', 'attr':'NOT NULL'}
     LASE_STATUS = {'name':'last_status', 'type':'CHAR(40)', 'attr':'NOT NULL'}
     CRONTAB = {'name':'crontab', 'type':'CHAR(100)', 'attr':'NOT NULL'}
+    TIMED = {'name':'timed', 'type':'INT(4)', 'attr':'NOT NULL DEFAULT 0'}
     PEOPLE = {'name':'poeple', 'type':'TEXT', 'attr':'NOT NULL'}
 
     CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
@@ -233,6 +238,7 @@ class PlanTable(BaseTable):
             + gen_field_str(CASE_LIST) + ','\
             + gen_field_str(LASE_STATUS) + ','\
             + gen_field_str(CRONTAB) + ','\
+            + gen_field_str(TIMED) + ','\
             + gen_field_str(PEOPLE) + ','\
             + 'PRIMARY KEY(id)'\
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
@@ -250,6 +256,7 @@ class PlanResultTable(BaseTable):
     STOPTIME = {'name':'stop_time', 'type':'DATETIME', 'attr':'NOT NULL'}
     USER = {'name':'user', 'type':'CHAR(40)', 'attr':'NOT NULL'}
     DESCRIPTION = {'name':'description', 'type':'TEXT', 'attr':''}
+    REPORT = {'name':'report', 'type':'CHAR(100)', 'attr':''}
 
     CRtab_SQL = 'CREATE TABLE ' + TABLE_NAME + '('\
             + gen_field_str(ID) + ','\
@@ -260,6 +267,7 @@ class PlanResultTable(BaseTable):
             + gen_field_str(STARTTIME) + ','\
             + gen_field_str(STOPTIME) + ','\
             + gen_field_str(DESCRIPTION) + ','\
+            + gen_field_str(REPORT) + ','\
             + 'PRIMARY KEY(id)'\
             + ') ENGINE=InnoDB DEFAULT CHARSET=utf8'
 

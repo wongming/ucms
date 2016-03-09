@@ -1,7 +1,7 @@
 $def with (driver)
 $var baseTitle: Driver Info
 $var navTitle: driver
-$var jsFiles: /static/js/driver.js
+$var jsFiles: /static/js/viewDriver.js
 <div class="title_bar">
     <div class="title_path">
         <ol class="breadcrumb">
@@ -11,9 +11,9 @@ $var jsFiles: /static/js/driver.js
         </ol>
     </div>
     <div class="title_operate">
-        <a href="/driver/del/$driver['id']"><button id ="view_del" class = "btn btn-sm">删除</button></a>
-        <a href="/driver/mod/$driver['id']"><button id ="view_mod" class = "btn btn-sm">修改</button></a>
-        <a href="/driver/add"><button id ="view_add" class = "btn btn-sm">添加</button></a>
+        <button id ="del_driver" class = "btn btn-sm">删除</button>
+        <a href="/driver/$driver['id']/mod"><button id ="mod_driver" class = "btn btn-sm">修改</button></a>
+        <a href="/driver/add"><button id ="add_driver" class = "btn btn-sm">添加</button></a>
     </div>
 </div>
 <div class="view_container">
@@ -22,6 +22,7 @@ $var jsFiles: /static/js/driver.js
             <h3 class="panel-title">基本信息</h3>
         </div>
         <div class="panel-body">
+            <input id="driver_id" type="hidden" name="driver_id" value="$driver['id']">
             <div class="col-md-12">
                 <label class="col-sm-2">Name:</label>
                 <label class="col-sm-10 control-label">$driver['name']</label>

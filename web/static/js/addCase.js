@@ -18,6 +18,7 @@ $(document).ready(function(){
             var value = tr_list[i].cells[1].childNodes[0].value;
             param[key] = value;
         }
+        alert(param);
         $('#param').val(JSON.stringify(param));
         $.post(url, $('#case_add_form').serialize(), function(data){
             data = eval(data);

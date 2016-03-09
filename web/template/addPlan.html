@@ -28,23 +28,26 @@ $var jsFiles: /static/js/addPlan.js
             	<div class="col-sm-3">
                 	<input type="text" class="form-control" id="plan-desc-add" name="case_list">
             	</div>
+                <label class="col-sm-7">以,隔开，如tc_1,tc_2</label>
         	</div>
           <div class="form-group">
             	<label class="col-sm-2 control-label">Crontab:</label>
             	<div class="col-sm-3">
                 	<input type="text" class="form-control" id="add-plan-desc" name="crontab">
             	</div>
+                <label class="col-sm-7">格式：%Y-%m-%d %H:%M:%S，如2016-01-01 12:00:00</label>
         	</div>
           <div class="form-group">
             	<label class="col-sm-2 control-label">People:</label>
             	<div class="col-sm-3">
                 	<input type="text" class="form-control" id="add-plan-desc" name="people">
             	</div>
+                <label class="col-sm-7">填写邮箱地址，以,隔开，如xxx@gmail.com,xxx@163.com</label>
         	</div>
         	<div class="form-group">
             	<label class="col-sm-2 control-label">Description:</label>
-            	<div class="col-sm-3">
-                	<input type="text" class="form-control" id="add-plan-desc" name="description">
+            	<div class="col-sm-8">
+                	<textarea type="text" class="form-control" id="add-plan-desc" name="description"></textarea>
             	</div>
         	</div>
 

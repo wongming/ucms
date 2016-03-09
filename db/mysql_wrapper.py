@@ -184,14 +184,14 @@ class MysqlWrapper:
 
     def clear_row_by_id(self, tableName, id):
         ids = '(%s)' % id
-        self.clear_rows_by_ids(tableName, ids)
+        return self.clear_rows_by_ids(tableName, ids)
 
     def	clear_rows_by_ids(self, tableName, ids):
         line = 'DELETE FROM %(tableName)s where id in (%(ids)s) ;' % {'tableName': tableName, 'ids': ids}
         if not self.execute(line):
             self.logger.error('Clear rows from table: [%s] by ids, ids: [%s] failed. Exit!' % (tableName, ids))
-            self.close()
-            sys.exit(-1)
+            return False
+        return True
 
     def clear_rows_by_dict(self, tableName, cond_dict):
         keylist = cond_dict.keys()

@@ -47,12 +47,16 @@ class AppController(BaseController):
             return None
         return ret[1]
 
+    def deleteApp(self, id):
+        ret = self.table.deleteById(id)
+        return ret
+
     def count(self,cond_dict={}):
         ret = self.table.count(cond_dict)
         if not ret[0]==0:
             return 0
         return ret[1]
-        
+
     def updateApp(self, id, value_map):
         ret = self.table.update({'id': id}, value_map)
         return ret
@@ -65,6 +69,8 @@ class AppController(BaseController):
 
     def getAllApps(self):
         ret = self.table.selectAll()
+        if not ret[0] == RT.SUCC:
+            return []
         return ret[1]
 
     def releaseApp(self, id):
